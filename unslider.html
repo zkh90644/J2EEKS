@@ -62,34 +62,36 @@ body{
 <script src="http://cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
 <script src="http://stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
 <script src="http://stephband.info/jquery.event.swipe/js/jquery.event.swipe.js"></script>
-<script src="./js/unslider.js"></script>
+<script src="./js/unslider-1.0.0.js"></script>
 <script>
 $(function() {
-    var slider = $('.z_class_banner').unslider({
-    	autoplay:true,
-    	delay:5000,
-    	arrows: {
-			prev: '<img src="./img/ad_button.png" class="z_div_ad_banner z_div_pre"/>',
-			next: '<img src="./img/ad_button.png" class="z_div_ad_banner z_div_next"/>',
-		},
+  //   var slider = $('.z_class_banner').unslider({
+  //   	autoplay:true,
+  //   	delay:5000,
+  //   	arrows: {
+		// 	prev: '<img src="./img/ad_button.png" class="z_div_ad_banner z_div_pre"/>',
+		// 	next: '<img src="./img/ad_button.png" class="z_div_ad_banner z_div_next"/>',
+		// },
+		// dots:false,
 
-    });
-    slider.unslider('start');
+  //   });
 
-	    // speed: 1000,               //  幻灯片切换速度（毫秒）
-	    // delay: 5000,              //  每张幻灯片停留时间 (毫秒)
-	    // complete: function() {},  //  当幻灯结束时执行动作
-	    // keys: true,               //  开启键盘支持（左右键切换）
-	    // dots: true,               //  显示原点导航
-	    // fluid: true              //  支持响应式，部分非响应式网站可能不支持
+$('.z_class_banner').unslider({
+	speed: 500,               //  The speed to animate each slide (in milliseconds)
+	delay: 3000,              //  The delay between slide animations (in milliseconds)
+	complete: function() {},  //  A function that gets called after every slide animation
+	keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+	dots: false,               //  Display dot navigation
+	fluid: true              //  Support responsive design. May break non-responsive designs
+});
    
 });
 </script>
 
 </head>
 <body>
-<div class="z_class_banner" style="height: 100px;">
-    <ul style="height: 100px;">
+<div class="z_class_banner">
+    <ul>
         <li><img src="./img/1.jpg" style="width:100%;height:100%;"></li>
         <li><img src="./img/2.jpg" style="width:100%;height:100%;"></li>
         <li><img src="./img/3.jpg" style="width:100%;height:100%;"></li>
