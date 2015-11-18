@@ -57,33 +57,34 @@ body{
 
 
 </style>
+<link rel="stylesheet" type="text/css" href="./css/unslider.css">
 
 <script src="./js/jquery.js"></script>
 <script src="http://cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
 <script src="http://stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
 <script src="http://stephband.info/jquery.event.swipe/js/jquery.event.swipe.js"></script>
-<script src="./js/unslider-1.0.0.js"></script>
+<script src="./js/unslider.js"></script>
 <script>
 $(function() {
-  //   var slider = $('.z_class_banner').unslider({
-  //   	autoplay:true,
-  //   	delay:5000,
-  //   	arrows: {
-		// 	prev: '<img src="./img/ad_button.png" class="z_div_ad_banner z_div_pre"/>',
-		// 	next: '<img src="./img/ad_button.png" class="z_div_ad_banner z_div_next"/>',
-		// },
-		// dots:false,
+    var slider = $('.z_class_banner').unslider({
+    	autoplay:true,
+    	delay:5000,
+    	arrows: {
+			prev: '<img src="./img/ad_button.png" class="z_div_ad_banner z_div_pre"/>',
+			next: '<img src="./img/ad_button.png" class="z_div_ad_banner z_div_next"/>',
+		},
+		dots:false,
 
-  //   });
+    });
 
-$('.z_class_banner').unslider({
-	speed: 500,               //  The speed to animate each slide (in milliseconds)
-	delay: 3000,              //  The delay between slide animations (in milliseconds)
-	complete: function() {},  //  A function that gets called after every slide animation
-	keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-	dots: false,               //  Display dot navigation
-	fluid: true              //  Support responsive design. May break non-responsive designs
-});
+// $('.z_class_banner').unslider({
+// 	speed: 500,               //  The speed to animate each slide (in milliseconds)
+// 	delay: 3000,              //  The delay between slide animations (in milliseconds)
+// 	complete: function() {},  //  A function that gets called after every slide animation
+// 	keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+// 	dots: false,               //  Display dot navigation
+// 	fluid: true              //  Support responsive design. May break non-responsive designs
+// });
    
 });
 </script>
