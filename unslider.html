@@ -1,121 +1,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<style>
-*{
-	padding:0px;
-	margin: 0px;
-}
-
-body{
-	background-color: lightgreen;
-}
-
-/**********轮播图样式开始************/
-
-.unslider{
-	overflow:auto;
-	position:relative;
-	width: 100%;
-	height: 100%;
-}
-.unslider-wrap{
-	position:relative
-}
-.unslider-wrap.unslider-carousel li{
-	float:left
-}
-.unslider-fade{
-	position:relative
-}
-.unslider-fade .unslider-wrap li{
-	position:absolute;left:0;top:0;right:0;z-index:8
-}
-.unslider-fade .unslider-wrap li.unslider-active{
-	z-index:10
-}
-.unslider li{
-	list-style:none;margin:0;padding:0;border:none
-}
-
-
-
-/*轮播图样式结束*/
-
-/***********左右按钮的样式开始**************/
-
-.z_div_ad_banner{
-	width: 100px;
-	height: 150px;
-	opacity: 0.3;
-    filter: alpha(opacity=30); /* For IE8 and earlier */
-    position: absolute;
-    cursor:pointer;
-    top: 50%;
-    margin-top: -75px;
-
-}
-
-
-/*鼠标悬浮于上面*/
-.z_div_ad_banner:hover{
-	opacity: 0.6;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
-}
-
-.z_div_pre{
-	left: 20px;
-}
-
-/*右边按钮旋转180*/
-.z_div_next{
-	-ms-transform:rotate(180deg); /* IE 9 */
-    -moz-transform:rotate(180deg); /* Firefox */
-    -webkit-transform:rotate(180deg); /* Safari and Chrome */
-    -o-transform:rotate(180deg); /* Opera */
-    right: 20px;
-}
-
-/***********左右按钮的样式结束************/
-
-/**************点选按钮*************/
-.unslider-nav{
-	position: relative;
-	margin: 0 auto;
-	top: -20px;
-}
-
-.unslider-nav ol {
-  list-style: none;
-  text-align: center;
-}
-.unslider-nav ol li {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin: 0 4px;
-  background: transparent;
-  border-radius: 5px;
-  overflow: hidden;
-  text-indent: -999em;
-  border: 2px solid #fff;
-  cursor: pointer;
-}
-.unslider-nav ol li.unslider-active {
-  background: #fff;
-  cursor: default;
-}
-/************点选按钮结束*************/
-
-@media screen and (max-width: 740px) {
-	.z_class_banner{
-		width: 740px;
-	}
-}
-
-
-</style>
-
+<link rel="stylesheet" type="text/css" href="./css/unslider.css">
 <script src="./js/jquery-2.1.4.js"></script>
 <!-- 增加流畅性 -->
 <script src="./js/velocity-min.js"></script>
@@ -123,22 +9,7 @@ body{
 <script src="./js/jquery.event.move.js"></script>
 <script src="./js/jquery.event.swipe.js"></script>
 <script src="./js/unslider.js"></script>
-<script>
-$(function() {
-    var slider = $('.z_class_banner').unslider({
-    	autoplay:true,			//自动播放
-    	delay:5000,				//播放延迟，毫秒
-    	arrows: {				//箭头设置
-			prev: '<img src="./img/ad_button.png" class="z_div_ad_banner z_div_pre"/>',	
-			next: '<img src="./img/ad_button.png" class="z_div_ad_banner z_div_next"/>',
-		},
-		nav:false,		//点选按钮设置为无。
-
-    });
-   
-});
-</script>
-
+<script src="./js/unslider_start.js"></script>
 </head>
 <body>
 <div class="z_class_banner">

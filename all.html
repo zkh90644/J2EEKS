@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="./css/menu_css.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="./css/unslider.css">
+</head>
+<body style="">
+<!---------------- 轮播图开始 ------------------>
+
+<div class="z_class_banner">
+    <ul>
+    	<!-- 直接将内容作为li放到其中即可 -->
+        <li><img src="./img/1.jpg" style="width:100%;height:100%;"></li>
+        <li><img src="./img/2.jpg" style="width:100%;height:100%;"></li>
+        <li><img src="./img/3.jpg" style="width:100%;height:100%;"></li>
+    </ul>
+</div>
+
+<!---------------- 轮播图结束 ------------------->
+
+<!---------------- 菜单栏开始 -------------------->
+
+<div id="z_div_menu">
+	<div  id="z_div_menu_logo"><img src="./img/logo.png"></div>
+	<div class="z_div_menu_option z_btn_down"><b>首页</b></div>
+	<div class="z_div_menu_option z_btn_down"><b>电影</b></div>
+	<div class="z_div_menu_option z_btn_down"><b>影院</b></div>
+	<div class="z_div_menu_option" id="z_div_menu_login">注册/登录</div>
+	
+	<div id="z_div_menu_all">
+		<img src="./img/menu_list.png" onmouseover="ShowList(this)" onmouseout="HideList(this)"/>
+		<ul id="z_div_menu_list"  onmouseover="ShowList(this)" onmouseout="HideList(this)">
+			<li>首页</li>
+			<li>电影</li>
+			<li>影院</li>
+			<li>注册</li>
+			<li>登录</li>
+		</ul>
+	</div>
+</div>
+<!------------------ 菜单栏结束 -------------------->
+
+
+	<script type="text/javascript"  src="./js/menu.js"></script>
+
+	<script src="./js/jquery-2.1.4.js"></script>
+	<!-- 增加流畅性 -->
+	<script src="./js/velocity-min.js"></script>
+	<!-- 增加移动端的匹配	 -->
+	<script src="./js/jquery.event.move.js"></script>
+	<script src="./js/jquery.event.swipe.js"></script>
+	<script src="./js/unslider.js"></script>
+	<script src="./js/unslider_start.js"></script>
+
+</body>
+</html>
