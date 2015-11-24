@@ -8,7 +8,7 @@
 	padding:0px;
 }
 
-#on-cinema{
+#z_div_on_cinema > img{
 	/*background-image: url(./img/onCinema_backgournd.png);*/
 	width: 100%;
 	height: 100%;
@@ -16,15 +16,19 @@
 
 /*根据浏览器自适应*/
 @media screen and (max-width: 740px) {
-	
+	#z_div_on_cinema > img{
+	/*background-image: url(./img/onCinema_backgournd.png);*/
+	width: 740px;
+	height: 100%;
+}
 }
 
 </style>
 </head>
 <body>
-	<div>
-		<img src="./img/onCinema_backgournd.png"  id="z_on-cinema">
-
+	<div id="z_div_on_cinema">
+		<img src="./img/onCinema_backgournd.png">
+		<div></div>
 	</div>
 </body>
 </html>
