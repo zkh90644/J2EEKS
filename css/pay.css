@@ -1,0 +1,43 @@
+body{
+  background-color:lightgrey;
+}
+
+#z_div_pay_header{
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.navbar-header > .navbar-brand > span{
+  font-size: 16px;
+}
+
+#z_div_order_price{
+  font-size:24px;
+  float:right;
+  color:rgb(255, 140, 0);
+  margin-top:-5px;
+}
+
+#z_div_order_price > span{
+  font-size:12px;
+  color:#000;
+}
+
+#z_div_pay_way{
+  background-color:white;
+  box-shadow:0 3px 5px rgba(255,255,255, 0.4);
+  padding:20px 40px;
+}
+
+#z_img_alipay_logo{
+  width:100px;
+}
+
+#z_div_order_pay_banks{
+  padding:0px;
+}
+#z_div_order_pay_banks > div{
+  padding:0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

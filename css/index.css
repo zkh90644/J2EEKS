@@ -13,6 +13,13 @@ body{
 
 }
 
+
+
+
+/**
+ *win8-block
+ */
+
 #z_div_win8block{
 	 padding:0px;
 }
@@ -24,11 +31,15 @@ body{
 
 #z_div_win8block_header{
     color: white;
+    position:relative;
 }
 
-#z_div_win8block_content_menu{
+#z_div_win8block_content_more{
     position:absolute;
-    bottom:0;right:0;line-height:24px;opacity:0.8;
+    bottom:0;
+    right:0;
+    line-height:24px;
+    opacity:0.8;
     filter:Alpha(opacity=80);
 }
 
@@ -51,4 +62,129 @@ body{
 #z_div_win8block_content_ads  img,#z_div_win8block_content_ads  img {
     padding:5px;
     width:100%;
+}
+
+
+
+/**
+ *即将上映
+ */
+#z_div_comesoon{
+    padding:0;
+    color:white;
+}
+
+#z_div_comesoon_header{
+    padding-top: 40px;
+
+}
+
+#z_div_comesoon_header_title{
+    font-size: 24px;
+}
+
+#z_div_comesoon_header_more{
+    position:absolute;
+    bottom:0;
+    right:0;
+    line-height:24px;
+    opacity:0.8;
+    filter:Alpha(opacity=80);
+}
+
+
+#z_div_comesoon_content_items{
+    padding-left: 0px;
+    padding-right: 0px; 
+    margin-bottom: 60px; 
+}
+
+.z_div_comesoon_content_item{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.z_div_comesoon_content_item > hr{
+    border-color: red;
+    border-width: 2px;
+    margin-bottom: 0px;
+}
+
+.z_div_comesoon_content_item_container{
+     padding:0;
+}
+
+.z_div_comesoon_content_items_img{
+    margin:20px 40px 20px 40px;
+}
+
+.z_div_comesoon_content_items_img > img{
+    width: 100%;
+}
+
+.z_div_comesoon_content_items_intro{
+    margin:20px 40px;
+}
+
+/**
+ *影院介绍
+ */
+
+ #z_div_cinema{
+    padding:0;
+    color:#000;
+}
+
+#z_div_cinema_header{
+    padding-top: 40px;
+
+}
+
+#z_div_cinema_header_title{
+    font-size: 24px;
+}
+
+#z_div_cinema_header_more{
+    position:absolute;
+    bottom:0;
+    right:0;
+    line-height:24px;
+    opacity:0.8;
+    filter:Alpha(opacity=80);
+}
+
+
+.z_div_cinema_content_item > div{
+    padding: 20px 0;
+    font-size: 24px;
+    color: white;
+    margin:0 auto;
+    right:auto;
+    left: auto;
+    width: 34px;    /*不改变会跑偏*/
+}
+
+/* 竖排从左到右，从上往下 */
+.z_div_cinema_content_item > div > span{    
+    -ms-writing-mode: tb-rl;
+ /* old syntax. IE */
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+ /* new syntax */
+    -webkit-text-orientation: upright;
+    -moz-text-orientation: upright;
+    -ms-text-orientation: upright;
+    text-orientation: upright;
+}
+/*脚部*/
+
+#z_div_footer{
+    line-height: 50px;
+    color: white;
+    background-color: #3d3d3d;
+}
+@media screen and(max-width: 768px;){
+    
 }
