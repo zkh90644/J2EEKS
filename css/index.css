@@ -59,7 +59,7 @@ body{
     margin:0;
 }
 
-#z_div_win8block_content_ads  img,#z_div_win8block_content_ads  img {
+#z_div_win8block_content_ads  img{
     padding:5px;
     width:100%;
 }
@@ -95,8 +95,8 @@ body{
 
 #z_div_comesoon_content_items{
     padding-left: 0px;
-    padding-right: 0px; 
-    margin-bottom: 60px; 
+    padding-right: 0px;
+    margin-bottom: 60px;
 }
 
 .z_div_comesoon_content_item{
@@ -153,6 +153,9 @@ body{
     filter:Alpha(opacity=80);
 }
 
+.z_div_cinema_content_item{
+	height: 100%;
+}
 
 .z_div_cinema_content_item > div{
     padding: 20px 0;
@@ -162,10 +165,11 @@ body{
     right:auto;
     left: auto;
     width: 34px;    /*不改变会跑偏*/
+
 }
 
 /* 竖排从左到右，从上往下 */
-.z_div_cinema_content_item > div > span{    
+.z_div_cinema_content_item > div > div > span{
     -ms-writing-mode: tb-rl;
  /* old syntax. IE */
     -webkit-writing-mode: vertical-rl;
@@ -178,13 +182,15 @@ body{
     -ms-text-orientation: upright;
     text-orientation: upright;
 }
+
+.z_div_cinema_content_item_intro > div > span{
+	word-wrap: break-word;
+	word-break: normal;
+}
 /*脚部*/
 
 #z_div_footer{
     line-height: 50px;
     color: white;
     background-color: #3d3d3d;
-}
-@media screen and(max-width: 768px;){
-    
 }
