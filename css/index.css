@@ -13,6 +13,9 @@ body{
 
 }
 
+#z_div_menu{
+	z-index:100;
+}
 
 
 
@@ -182,16 +185,15 @@ body{
 	height:250px;
 }
 
-.z_div_cinema_content_item{
+.z_div_cinema_content_all{
 	height: 100%;
-	width:10%;
 	float:left;
+	color: white;
 }
 
 .z_div_cinema_content_item > div{
     padding: 20px 0;
     font-size: 24px;
-    color: white;
     margin:0 auto;
     right:auto;
     left: auto;
@@ -214,29 +216,37 @@ body{
     text-orientation: upright;
 }
 
-.z_div_cinema_content_item_intro > div > span{
-	word-wrap: break-word;
-	word-break: normal;
+.z_div_cinema_content_item .z_div_cinema_content_item_intro{
+	display: none;
 }
+
+.z_div_cinema_content_item .z_div_cinema_content_item_img{
+	display: none;
+}
+
 
 .z_div_cinema_content_item_display{
 	color:white;
 	height:100%;
 	padding:20px;
 	font-size:20px;
-	width:40%;
 	float:left;
 }
 
-.z_div_cinema_content_item_intro{
-	padding:0px;
-	margin:0px;
+.z_div_cinema_content_item_display .z_div_cinema_content_item_intro > span{
+	word-wrap: break-word;
+	word-break: normal;
 }
 
-.z_div_cinema_content_item_img{
+.z_div_cinema_content_item_display .z_div_cinema_content_item_img{
+		padding:0px;
+		margin-left:10px;
+		margin-top:50px;
+}
+
+.z_div_cinema_content_all > div > .col-sm-5{
 	padding:0px;
-	margin-left:10px;
-	margin-top:50px;
+	margin:0px;
 }
 
 .z_div_cinema_content_item_img > .img-responsive{
@@ -251,4 +261,14 @@ body{
     line-height: 50px;
     color: white;
     background-color: #3d3d3d;
+}
+
+
+@media screen and (max-width: 768px) {
+		.z_div_cinema_content_item_img{
+				display: none;
+		}
+		.z_div_comesoon_content_items_img{
+			padding:30px 30px 30px 0;
+		}
 }
