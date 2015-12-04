@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="charset" content="utf-8">
+<title>旋转demo</title>
+<style>
+/*img{
+    width:280px;
+    height:180px;
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+}*/
+.item{
+    position:relative;
+    width:280px;
+    height:180px;
+    -webkit-perspective:500px;      /*透视距离*/
+    -moz-perspective:500px;
+}
+.card{
+    position:absolute;
+    width:100%;
+    height:100%;
+    -webkit-transform-style:preserve-3d;
+    -webkit-transition-duration:1s;
+    -moz-backface-visibility:hidden;
+    -moz-transform-style:preserve-3d;
+    -moz-transition-duration:1s;
+}
+.photo,.des{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style:preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform-style:preserve-3d;
+    -moz-backface-visibility: hidden;
+}
+
+.photo{
+    background-color: lightgreen;
+}
+
+.des{
+    background-color:lightblue;
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+}
+
+.item:hover .card{
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+}
+
+</style>
+</head>
+
+<body>
+<center>
+    <div class="item">
+        <div class="card">
+            <div class="photo">
+              <img src="./img/comesoon_ad1.jpg" alt="" />
+            </div>
+            <div class="des">
+                <p>title</p>
+                <p>author</p>
+                <p>time</p>
+            </div>
+        </div>
+    </div>
+</center>
+</body>
+</html>

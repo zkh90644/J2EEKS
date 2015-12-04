@@ -26,11 +26,10 @@
   	});
 	})
 </script>
-
-</head>
-
 <style media="screen">
+	
 </style>
+</head>
 
 <body>
 <div id="z_div_index_ad" class="carousel slide" data-ride="carousel">
@@ -112,7 +111,7 @@
                 <div class="container-fluid col-sm-5">
                     <div class="container-fluid col-sm-12 z_div_win8block_content_item" style="position:relative;">
                         <img src="./img/ant-man.png" class="col-sm-12">
-												<div class="z_div_win8block_content_item_word text-center" style="">
+												<div class="z_div_win8block_content_item_word text-center">
 													<h3>蚁人<br>正在热映</h3>
 												</div>
                     </div>
@@ -179,13 +178,16 @@
         <div class="col-sm-3 z_div_comesoon_content_item container-fluid" >
             <!-- 划横线 -->
             <hr>
-            <!-- 修改手机版时候的marin值 -->
-            <div class="z_div_comesoon_content_item_container container-fluid col-sm-12">
-                <div class="z_div_comesoon_content_items_img">
-                   <img src="./img/comesoon_ad1.jpg">
-                </div>
-                <div class="z_div_comesoon_content_items_intro" ><h4>寻龙诀</h4><h5>12月18日上映</h5></div>
-            </div>
+						<div class="z_div_3Drevolv_content" role="3Drevolv">
+							<div class="z_div_comesoon_content_item_container container-fluid col-sm-12 z_div_3Drevolv_card">
+									<div class="z_div_comesoon_content_items_img z_div_3Drevolv_front">
+										 <img src="./img/comesoon_ad1.jpg">
+									</div>
+									<div class="z_div_comesoon_content_items_intro z_div_3Drevolv_back" >
+										<h4>寻龙诀</h4><h5>12月18日上映</h5>
+									</div>
+							</div>
+						</div>
         </div>
         <div class="col-sm-3 z_div_comesoon_content_item container-fluid" >
             <!-- 划横线 -->
@@ -341,10 +343,13 @@
 <script type="text/javascript">
 // 最后一栏变宽变窄的动画
 		$(".z_div_cinema_content_item").click(function(){
-			if($(this).css("width") != $('.z_div_cinema_content_item_display').css("width")){
-				$('.z_div_cinema_content_item_display').animate({width:"10%"});
+			var diaplayBlock = $('.z_div_cinema_content_item_display');
+			if($(this).css("width") != diaplayBlock.css("width")){
+
+
+				diaplayBlock.animate({width:"10%"});
 				$(this).animate({width:"40%"});
-				$('.z_div_cinema_content_item_display').attr("class","z_div_cinema_content_item z_div_cinema_content_all");
+				diaplayBlock.attr("class","z_div_cinema_content_item z_div_cinema_content_all");
 				$(this).attr("class","z_div_cinema_content_item_display z_div_cinema_content_all");
 			}
 		});
@@ -369,7 +374,7 @@
 		focusword.animate({opacity:1});
 	});
 
-	$('.z_div_win8block_content_item').mouseout(function() {
+	$('.z_div_win8block_content_item').mouseleave(function() {
 		var focus = $(this).find("img");
 		var focusword = $(this).find(".z_div_win8block_content_item_word");
 		$({blurRadius: 5}).animate({blurRadius: 0}, {
