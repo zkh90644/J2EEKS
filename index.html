@@ -26,24 +26,10 @@
   	});
 	})
 </script>
+
 </head>
 
 <style media="screen">
-.z_div_win8block_content_item > div{
-	background-color: lightgrey;
-	position:absolute;
-	padding:5px;
-	height:100%;
-	opacity: 0;
-	filter:Alpha(opacity=0);
-	transition: all 3s ease-in-out;
-}
-
-.z_div_win8block_content_item > img:hover{
-	opacity:0.8;
-	filter: Alpha(opacity=80);
-}
-
 </style>
 
 <body>
@@ -126,29 +112,47 @@
                 <div class="container-fluid col-sm-5">
                     <div class="container-fluid col-sm-12 z_div_win8block_content_item" style="position:relative;">
                         <img src="./img/ant-man.png" class="col-sm-12">
-												<div class="col-sm-12 text-center">
-													<h3 style="color:white;">蚁人<br>XX月XX日上映</h3>
+												<div class="z_div_win8block_content_item_word text-center" style="">
+													<h3>蚁人<br>正在热映</h3>
 												</div>
                     </div>
-                    <div class="container-fluid col-sm-4">
+                    <div class="container-fluid col-sm-4 z_div_win8block_content_item">
                         <img src="./img/left-bottom.png">
+												<div class="z_div_win8block_content_item_word text-center" >
+													<h3>蚁人<br>正在热映</h3>
+												</div>
                     </div>
-                    <div class="container-fluid col-sm-4">
+                    <div class="container-fluid col-sm-4 z_div_win8block_content_item">
                         <img src="./img/left-bottom.png">
+												<div class="z_div_win8block_content_item_word text-center" >
+													<h3>蚁人<br>正在热映</h3>
+												</div>
                     </div>
-                    <div class="container-fluid col-sm-4">
+                    <div class="container-fluid col-sm-4 z_div_win8block_content_item">
                         <img src="./img/left-bottom.png">
+												<div class="z_div_win8block_content_item_word text-center" >
+													<h3>蚁人<br>正在热映</h3>
+												</div>
                     </div>
                 </div>
                 <div class="container-fluid col-sm-7">
-                    <div class="container-fluid col-sm-12">
+                    <div class="container-fluid col-sm-12 z_div_win8block_content_item">
                         <img src="./img/right-top.png" class="col-sm-12">
+												<div class="z_div_win8block_content_item_word text-center" >
+													<h3>蚁人<br>正在热映</h3>
+												</div>
                     </div>
-                    <div class="container-fluid col-sm-7">
+                    <div class="container-fluid col-sm-7 z_div_win8block_content_item">
                         <img src="./img/little-prince.png">
+												<div class="z_div_win8block_content_item_word text-center" >
+													<h3>小王子<br>正在热映</h3>
+												</div>
                     </div>
-                    <div class="container-fluid col-sm-5">
-                        <img src="./img/right-bottom.png" class="col-sm-5">
+                    <div class="container-fluid col-sm-5 z_div_win8block_content_item">
+                        <img src="./img/right-bottom.png">
+												<div class="z_div_win8block_content_item_word text-center" >
+													<h3>蚁人<br>正在热映</h3>
+												</div>
                     </div>
                 </div>
             </div>
@@ -339,12 +343,50 @@
 		$(".z_div_cinema_content_item").click(function(){
 			if($(this).css("width") != $('.z_div_cinema_content_item_display').css("width")){
 				$('.z_div_cinema_content_item_display').animate({width:"10%"});
+				$(this).animate({width:"40%"});
 				$('.z_div_cinema_content_item_display').attr("class","z_div_cinema_content_item z_div_cinema_content_all");
-				$(this).animate({width:"40%"},"normal",function	() {
-					$(this).attr("class","z_div_cinema_content_item_display z_div_cinema_content_all");
-				});
+				$(this).attr("class","z_div_cinema_content_item_display z_div_cinema_content_all");
 			}
 		});
+
+// win8-block的模糊动画开始
+	$('.z_div_win8block_content_item').mouseenter(function() {
+		var focus = $(this).find("img");
+		var focusword = $(this).find(".z_div_win8block_content_item_word");
+
+		$({blurRadius: 0}).animate({blurRadius: 5}, {
+		    duration: 250,
+		    easing: 'swing', // or "linear"
+		                     // use jQuery UI or Easing plugin for more options
+		    step: function() {
+		        focus.css({
+		            "-webkit-filter": "blur("+this.blurRadius+"px)",
+		            "filter": "blur("+this.blurRadius+"px)"
+		    });
+		  }
+		});
+		focus.animate({opacity:0.3});
+		focusword.animate({opacity:1});
+	});
+
+	$('.z_div_win8block_content_item').mouseout(function() {
+		var focus = $(this).find("img");
+		var focusword = $(this).find(".z_div_win8block_content_item_word");
+		$({blurRadius: 5}).animate({blurRadius: 0}, {
+		    duration: 250,
+		    easing: 'swing', // or "linear"
+		                     // use jQuery UI or Easing plugin for more options
+		    step: function() {
+		        focus.css({
+		            "-webkit-filter": "blur("+this.blurRadius+"px)",
+		            "filter": "blur("+this.blurRadius+"px)"
+		    });
+		  }
+		});
+		focus.animate({opacity:1});
+		focusword.animate({opacity:0});
+	});
+// win8-block模糊动画
 </script>
 <!-- 脚部 -->
 <div id="z_div_footer" class="container-fluid text-center col-sm-12 clearfix" >

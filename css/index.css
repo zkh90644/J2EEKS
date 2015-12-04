@@ -70,7 +70,16 @@ body{
     padding:5px;
     width:100%;
 }
-
+.z_div_win8block_content_item_word{
+	position:absolute;
+	color:#fff;
+	z-index:10;
+	margin:5px;
+	width:100%;
+	line-height:100%;
+	top:25%;
+	opacity:0;
+}
 
 
 /**
@@ -218,6 +227,8 @@ body{
 
 .z_div_cinema_content_item .z_div_cinema_content_item_intro{
 	display: none;
+	opacity: 0;
+	filter: opacity(0);
 }
 
 .z_div_cinema_content_item .z_div_cinema_content_item_img{
