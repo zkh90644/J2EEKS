@@ -9,6 +9,14 @@
 <script src="./js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="./css/index.css">
 <script type="text/javascript">
+function changeHeightOfComesoon() {
+	// 自动调整comesoon的高度
+	var img = $(".z_div_3Drevolve_front").find("img");
+	var imgHeight = img.height()+"px";
+	$('.z_div_comesoon_item').css("height",imgHeight);
+	$('.z_div_3Drevolve_back').css("height",imgHeight);
+
+}
 	$(document).ready(function(){
 		// 菜单栏吸住头部
 		$(document).scroll(function() {
@@ -24,10 +32,47 @@
 					$("#z_div_win8block").css("margin-top","0px");
 				}
   	});
+
+		$(window).resize(changeHeightOfComesoon);
 	})
+	window.onload = function(){
+		changeHeightOfComesoon();
+	}
 </script>
 <style media="screen">
-	
+	.z_div_3Drevolve_item{
+		-webkit-perspective:500px;      /*透视距离*/
+		-moz-perspective:500px;
+	}
+
+	.z_div_3Drevolve_card{
+		    position:relative;
+		    width:100%;
+		    -webkit-transform-style:preserve-3d;
+		    -webkit-transition-duration:1s;
+		    -moz-backface-visibility:hidden;
+		    -moz-transform-style:preserve-3d;
+		    -moz-transition-duration:1s;
+	}
+
+	.z_div_3Drevolve_front,.z_div_3Drevolve_back{
+		position: absolute;
+		width: 100%;
+		-webkit-transform-style:preserve-3d;
+		-webkit-backface-visibility: hidden;
+		-moz-transform-style:preserve-3d;
+		-moz-backface-visibility: hidden;
+	}
+	.z_div_3Drevolve_back{
+	    background-color:lightblue;
+	    -webkit-transform:rotateY(180deg);
+	    -moz-transform:rotateY(180deg);
+	}
+
+	.z_div_3Drevolve_item:hover .z_div_3Drevolve_card{
+	    -webkit-transform:rotateY(180deg);
+	    -moz-transform:rotateY(180deg);
+	}
 </style>
 </head>
 
@@ -172,57 +217,22 @@
             </div>
         </div>
     </div>
-
-    <div class="col-sm-12 container-fluid" id="z_div_comesoon_content_items">
-        <!-- 每一个内容 -->
-        <div class="col-sm-3 z_div_comesoon_content_item container-fluid" >
-            <!-- 划横线 -->
-            <hr>
-						<div class="z_div_3Drevolv_content" role="3Drevolv">
-							<div class="z_div_comesoon_content_item_container container-fluid col-sm-12 z_div_3Drevolv_card">
-									<div class="z_div_comesoon_content_items_img z_div_3Drevolv_front">
-										 <img src="./img/comesoon_ad1.jpg">
-									</div>
-									<div class="z_div_comesoon_content_items_intro z_div_3Drevolv_back" >
-										<h4>寻龙诀</h4><h5>12月18日上映</h5>
-									</div>
+		<div class="col-sm-12 z_div_comesoon_content container-fluid" style="padding:0 0 60px 0;">
+			<!-- 每个图片 -->
+				<hr style="border-color:red;border-width:2px;">
+				<div class="z_div_comesoon_item col-sm-3"style="padding-left:0;padding-right:">
+						<div class="z_div_3Drevolve_item col-sm-10 col-sm-push-1">
+							<div class="z_div_3Drevolve_card">
+								<div class="z_div_3Drevolve_front">
+									<img src="./img/comesoon_ad1.jpg" alt="" style="width:100%;"/>
+								</div>
+								<div class="z_div_3Drevolve_back text-center" style="">
+									<h3 style="color:white;">寻龙诀<br>12月18日上映</h3>
+								</div>
 							</div>
 						</div>
-        </div>
-        <div class="col-sm-3 z_div_comesoon_content_item container-fluid" >
-            <!-- 划横线 -->
-            <hr>
-            <!-- 修改手机版时候的marin值 -->
-            <div class="z_div_comesoon_content_item_container container-fluid col-sm-12">
-                <div class="z_div_comesoon_content_items_img">
-                   <img src="./img/comesoon_ad1.jpg">
-                </div>
-                <div class="z_div_comesoon_content_items_intro" ><h4>寻龙诀</h4><h5>12月18日上映</h5></div>
-            </div>
-        </div>
-        <div class="col-sm-3 z_div_comesoon_content_item container-fluid" >
-            <!-- 划横线 -->
-            <hr>
-            <!-- 修改手机版时候的marin值 -->
-            <div class="z_div_comesoon_content_item_container container-fluid col-sm-12">
-                <div class="z_div_comesoon_content_items_img">
-                   <img src="./img/comesoon_ad1.jpg">
-                </div>
-                <div class="z_div_comesoon_content_items_intro" ><h4>寻龙诀</h4><h5>12月18日上映</h5></div>
-            </div>
-        </div>
-        <div class="col-sm-3 z_div_comesoon_content_item container-fluid" >
-            <!-- 划横线 -->
-            <hr>
-            <!-- 修改手机版时候的marin值 -->
-            <div class="z_div_comesoon_content_item_container container-fluid col-sm-12">
-                <div class="z_div_comesoon_content_items_img">
-                   <img src="./img/comesoon_ad1.jpg">
-                </div>
-                <div class="z_div_comesoon_content_items_intro" ><h4>寻龙诀</h4><h5>12月18日上映</h5></div>
-            </div>
-        </div>
-    </div>
+				</div>
+		</div>
 </div>
 
 

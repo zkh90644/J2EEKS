@@ -114,40 +114,6 @@ body{
     filter:Alpha(opacity=80);
 }
 
-
-#z_div_comesoon_content_items{
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-bottom: 60px;
-}
-
-.z_div_comesoon_content_item{
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.z_div_comesoon_content_item > hr{
-    border-color: red;
-    border-width: 2px;
-    margin-bottom: 0px;
-}
-
-.z_div_comesoon_content_item_container{
-     padding:0;
-}
-
-.z_div_comesoon_content_items_img{
-    margin:20px 40px 20px 40px;
-}
-
-.z_div_comesoon_content_items_img > img{
-    width: 100%;
-}
-
-.z_div_comesoon_content_items_intro{
-    margin:20px 40px;
-}
-
 /**
  *影院介绍
  */
@@ -278,8 +244,5 @@ body{
 @media screen and (max-width: 768px) {
 		.z_div_cinema_content_item_img{
 				display: none;
-		}
-		.z_div_comesoon_content_items_img{
-			padding:30px 30px 30px 0;
 		}
 }
