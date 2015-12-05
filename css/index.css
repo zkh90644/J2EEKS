@@ -2,6 +2,40 @@ body{
 	background-color: #101010;
 }
 
+/*滑动动画效果*/
+.slideanim {visibility:hidden;}
+.slidein {
+    /* The name of the animation */
+    animation-name: slidein;
+    -webkit-animation-name: slidein;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+}
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slidein {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+/*滑动动画效果结束*/
+
 #z_div_navbar{
 	margin-bottom: 0px;
     border-width: 0px;
@@ -25,6 +59,7 @@ body{
 
 #z_div_win8block{
 	 padding:0px;
+	 background:url(../img/background-onMovie.jpg);
 }
 
 #z_div_win8block_content{
@@ -70,6 +105,11 @@ body{
     padding:5px;
     width:100%;
 }
+
+.z_div_win8block_content_item{
+	position:relative;
+}
+
 .z_div_win8block_content_item_word{
 	position:absolute;
 	color:#fff;
@@ -114,11 +154,73 @@ body{
     filter:Alpha(opacity=80);
 }
 
+#z_div_comesoon_content{
+	padding:0 0 60px 0;
+}
+
+#z_div_comesoon_content > hr{
+	border-color:red;
+	border-width:2px;
+}
+
+.z_div_comesoon_item{
+	padding-left:0;
+	padding-right:0;
+}
+
+.z_div_3Drevolve_item{
+	-webkit-perspective:500px;      /*透视距离*/
+	-moz-perspective:500px;
+}
+
+.z_div_3Drevolve_card{
+			position:relative;
+			width:100%;
+			-webkit-transform-style:preserve-3d;
+			-webkit-transition-duration:1s;
+			-moz-backface-visibility:hidden;
+			-moz-transform-style:preserve-3d;
+			-moz-transition-duration:1s;
+}
+
+.z_div_3Drevolve_front,.z_div_3Drevolve_back{
+	position: absolute;
+	width: 100%;
+	-webkit-transform-style:preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-transform-style:preserve-3d;
+	-moz-backface-visibility: hidden;
+}
+
+.z_div_3Drevolve_front > img{
+	width:100%;
+}
+
+.z_div_3Drevolve_back{
+		background:url(../img/comesoon_ad1_back.png);
+		-webkit-transform:rotateY(180deg);
+		-moz-transform:rotateY(180deg);
+}
+
+.z_div_3Drevolve_back > h1{
+	color:white;
+	text-shadow:1px 1px 4px #000;
+}
+
+.z_div_3Drevolve_back > h1 > span{
+	font-size:20px;
+}
+
+.z_div_3Drevolve_item:hover .z_div_3Drevolve_card{
+		-webkit-transform:rotateY(180deg);
+		-moz-transform:rotateY(180deg);
+}
+
 /**
  *影院介绍
  */
 
- #z_div_cinema{
+#z_div_cinema{
     padding:0;
     color:#000;
 		background:#e1e1e1;

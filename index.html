@@ -16,13 +16,14 @@ function changeHeightOfComesoon() {
 	var halfImgHeight = img.height()/2 + "px";
 	$('.z_div_comesoon_item').css("height",imgHeight);
 	$('.z_div_3Drevolve_back').css("height",imgHeight);
-
+	//设置反面文字的div高度
 	$('.z_div_3Drevolve_back').find("h1").css("line-height",halfImgHeight);
 
 }
 	$(document).ready(function(){
 		// 菜单栏吸住头部
 		$(document).scroll(function() {
+			//设置头部菜单栏
 				var scrollTopOfwindow = $(document).scrollTop();
 				var adHeight = $('#z_div_index_ad').height();
 				if (scrollTopOfwindow > adHeight) {
@@ -34,49 +35,30 @@ function changeHeightOfComesoon() {
 					$("#z_div_menu").css("position","static");
 					$("#z_div_win8block").css("margin-top","0px");
 				}
+
+				//设置滑动效果
+				$(".slideanim").each(function(){
+			    var pos = $(this).offset().top;
+
+			    var winTop = $(window).scrollTop();
+			    if (pos < winTop + 600) {
+			      $(this).addClass("slidein");
+			    }
+			  });
+
   	});
 
 		$(window).resize(changeHeightOfComesoon);
+
+
+
 	})
+
+	//页面加载完成后即修改一次高度
 	window.onload = function(){
 		changeHeightOfComesoon();
 	}
 </script>
-<style media="screen">
-	.z_div_3Drevolve_item{
-		-webkit-perspective:500px;      /*透视距离*/
-		-moz-perspective:500px;
-	}
-
-	.z_div_3Drevolve_card{
-		    position:relative;
-		    width:100%;
-		    -webkit-transform-style:preserve-3d;
-		    -webkit-transition-duration:1s;
-		    -moz-backface-visibility:hidden;
-		    -moz-transform-style:preserve-3d;
-		    -moz-transition-duration:1s;
-	}
-
-	.z_div_3Drevolve_front,.z_div_3Drevolve_back{
-		position: absolute;
-		width: 100%;
-		-webkit-transform-style:preserve-3d;
-		-webkit-backface-visibility: hidden;
-		-moz-transform-style:preserve-3d;
-		-moz-backface-visibility: hidden;
-	}
-	.z_div_3Drevolve_back{
-	    background-color:lightblue;
-	    -webkit-transform:rotateY(180deg);
-	    -moz-transform:rotateY(180deg);
-	}
-
-	.z_div_3Drevolve_item:hover .z_div_3Drevolve_card{
-	    -webkit-transform:rotateY(180deg);
-	    -moz-transform:rotateY(180deg);
-	}
-</style>
 </head>
 
 <body>
@@ -148,7 +130,7 @@ function changeHeightOfComesoon() {
 
 <!-- win8方块 -->
 <div class="container-fluid" id="z_div_win8block">
-	<div class="col-sm-12" style="background:url(./img/background-onMovie.jpg);">
+	<div class="col-sm-12" >
 		<!-- 布局，居于正中 -->
 		<div class="col-sm-push-1 col-sm-10 container-fluid" id="z_div_win8block_content">
             <div id="z_div_win8block_header" class="container_fluid">
@@ -157,25 +139,25 @@ function changeHeightOfComesoon() {
             </div>
             <div class="conatainer-fluid col-sm-12" id="z_div_win8block_content_ads">
                 <div class="container-fluid col-sm-5">
-                    <div class="container-fluid col-sm-12 z_div_win8block_content_item" style="position:relative;">
+                    <div class="container-fluid col-sm-12 z_div_win8block_content_item slideanim">
                         <img src="./img/ant-man.png" class="col-sm-12">
 												<div class="z_div_win8block_content_item_word text-center">
 													<h3>蚁人<br>正在热映</h3>
 												</div>
                     </div>
-                    <div class="container-fluid col-sm-4 z_div_win8block_content_item">
+                    <div class="container-fluid col-sm-4 z_div_win8block_content_item slideanim">
                         <img src="./img/left-bottom.png">
 												<div class="z_div_win8block_content_item_word text-center" >
 													<h3>蚁人</h3>
 												</div>
                     </div>
-                    <div class="container-fluid col-sm-4 z_div_win8block_content_item">
+                    <div class="container-fluid col-sm-4 z_div_win8block_content_item slideanim">
                         <img src="./img/left-bottom.png">
 												<div class="z_div_win8block_content_item_word text-center" >
 													<h3>蚁人</h3>
 												</div>
                     </div>
-                    <div class="container-fluid col-sm-4 z_div_win8block_content_item">
+                    <div class="container-fluid col-sm-4 z_div_win8block_content_item slideanim">
                         <img src="./img/left-bottom.png">
 												<div class="z_div_win8block_content_item_word text-center" >
 													<h3>蚁人</h3>
@@ -183,19 +165,19 @@ function changeHeightOfComesoon() {
                     </div>
                 </div>
                 <div class="container-fluid col-sm-7">
-                    <div class="container-fluid col-sm-12 z_div_win8block_content_item">
+                    <div class="container-fluid col-sm-12 z_div_win8block_content_item slideanim">
                         <img src="./img/right-top.png" class="col-sm-12">
 												<div class="z_div_win8block_content_item_word text-center" >
 													<h3>蚁人<br>正在热映</h3>
 												</div>
                     </div>
-                    <div class="container-fluid col-sm-7 z_div_win8block_content_item">
+                    <div class="container-fluid col-sm-7 z_div_win8block_content_item slideanim">
                         <img src="./img/little-prince.png">
 												<div class="z_div_win8block_content_item_word text-center" >
 													<h3>小王子<br>正在热映</h3>
 												</div>
                     </div>
-                    <div class="container-fluid col-sm-5 z_div_win8block_content_item">
+                    <div class="container-fluid col-sm-5 z_div_win8block_content_item slideanim">
                         <img src="./img/right-bottom.png">
 												<div class="z_div_win8block_content_item_word text-center" >
 													<h3>蚁人<br>正在热映</h3>
@@ -213,60 +195,60 @@ function changeHeightOfComesoon() {
 
     <div class="col-sm-12">
         <!-- 布局，居于正中 -->
-        <div class="col-sm-push-1 col-sm-10 container-fluid">
+        <div class="col-sm-push-1 col-sm-10 container-fluid ">
             <div id="z_div_comesoon_header" class="container_fluid">
                     <span id="z_div_comesoon_header_title">即将上映/<span>Come soon</span></span>
                     <span id="z_div_comesoon_header_more">more</span>
             </div>
         </div>
     </div>
-		<div class="col-sm-12 z_div_comesoon_content container-fluid" style="padding:0 0 60px 0;">
-				<hr style="border-color:red;border-width:2px;">
+		<div class="col-sm-12 container-fluid slideanim" id="z_div_comesoon_content">
+				<hr>
 					<!-- 每个图片 -->
-				<div class="z_div_comesoon_item col-sm-3"style="padding-left:0;padding-right:0;">
+				<div class="z_div_comesoon_item col-sm-3">
 						<div class="z_div_3Drevolve_item col-sm-10 col-sm-push-1">
 							<div class="z_div_3Drevolve_card">
 								<div class="z_div_3Drevolve_front">
-									<img src="./img/comesoon_ad1.jpg" alt="" style="width:100%;"/>
+									<img src="./img/comesoon_ad1.jpg" alt=""/>
 								</div>
-								<div class="z_div_3Drevolve_back text-center" style="background:url(img/comesoon_ad1_back.png)">
-									<h1 style="color:white;text-shadow:1px 1px 4px #000;">寻龙诀<br><span style="font-size:20px;">12月18日上映</span></h1>
+								<div class="z_div_3Drevolve_back text-center">
+									<h1>寻龙诀<br><span>12月18日上映</span></h1>
 								</div>
 							</div>
 						</div>
 				</div>
-				<div class="z_div_comesoon_item col-sm-3"style="padding-left:0;padding-right:0;">
+				<div class="z_div_comesoon_item col-sm-3">
 						<div class="z_div_3Drevolve_item col-sm-10 col-sm-push-1">
 							<div class="z_div_3Drevolve_card">
 								<div class="z_div_3Drevolve_front">
-									<img src="./img/comesoon_ad1.jpg" alt="" style="width:100%;"/>
+									<img src="./img/comesoon_ad1.jpg" alt=""/>
 								</div>
-								<div class="z_div_3Drevolve_back text-center" style="background:url(img/comesoon_ad1_back.png)">
-									<h1 style="color:white;text-shadow:1px 1px 4px #000;">寻龙诀<br><span style="font-size:20px;">12月18日上映</span></h1>
+								<div class="z_div_3Drevolve_back text-center">
+									<h1>寻龙诀<br><span>12月18日上映</span></h1>
 								</div>
 							</div>
 						</div>
 				</div>
-				<div class="z_div_comesoon_item col-sm-3"style="padding-left:0;padding-right:0;">
+				<div class="z_div_comesoon_item col-sm-3">
 						<div class="z_div_3Drevolve_item col-sm-10 col-sm-push-1">
 							<div class="z_div_3Drevolve_card">
 								<div class="z_div_3Drevolve_front">
-									<img src="./img/comesoon_ad1.jpg" alt="" style="width:100%;"/>
+									<img src="./img/comesoon_ad1.jpg" alt=""/>
 								</div>
-								<div class="z_div_3Drevolve_back text-center" style="background:url(img/comesoon_ad1_back.png)">
-									<h1 style="color:white;text-shadow:1px 1px 4px #000;">寻龙诀<br><span style="font-size:20px;">12月18日上映</span></h1>
+								<div class="z_div_3Drevolve_back text-center">
+									<h1>寻龙诀<br><span>12月18日上映</span></h1>
 								</div>
 							</div>
 						</div>
 				</div>
-				<div class="z_div_comesoon_item col-sm-3"style="padding-left:0;padding-right:0;">
+				<div class="z_div_comesoon_item col-sm-3">
 						<div class="z_div_3Drevolve_item col-sm-10 col-sm-push-1">
 							<div class="z_div_3Drevolve_card">
 								<div class="z_div_3Drevolve_front">
-									<img src="./img/comesoon_ad1.jpg" alt="" style="width:100%;"/>
+									<img src="./img/comesoon_ad1.jpg" alt=""/>
 								</div>
-								<div class="z_div_3Drevolve_back text-center" style="background:url(img/comesoon_ad1_back.png)">
-									<h1 style="color:white;text-shadow:1px 1px 4px #000;">寻龙诀<br><span style="font-size:20px;">12月18日上映</span></h1>
+								<div class="z_div_3Drevolve_back text-center">
+									<h1>寻龙诀<br><span>12月18日上映</span></h1>
 								</div>
 							</div>
 						</div>
@@ -287,7 +269,7 @@ function changeHeightOfComesoon() {
             </div>
         </div>
     </div>
-    <div class="col-sm-12 container-fluid" id="z_div_cinema_container">
+    <div class="col-sm-12 container-fluid slideanim" id="z_div_cinema_container">
         <div class="col-sm-12 container-fluid" id="z_div_cinema_content_items">
             <div class="z_div_cinema_content_item z_div_cinema_content_all" style="background-color:#fd6e6d;width:10%;">
 							<div>
