@@ -4,64 +4,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- bootstrap库加载 -->
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 <script src="./js/jquery.js"></script>
 <script src="./js/bootstrap.min.js"></script>
+<!-- 页面基本效果库加载 -->
 <link rel="stylesheet" type="text/css" href="./css/index.css">
-<script type="text/javascript">
-function changeHeightOfComesoon() {
-	// 自动调整comesoon的高度
-	var img = $(".z_div_3Drevolve_front").find("img");
-	var imgHeight = img.height()+"px";
-	var halfImgHeight = img.height()/2 + "px";
-	$('.z_div_comesoon_item').css("height",imgHeight);
-	$('.z_div_3Drevolve_back').css("height",imgHeight);
-	//设置反面文字的div高度
-	$('.z_div_3Drevolve_back').find("h1").css("line-height",halfImgHeight);
+<script src="./js/index_onload.js" charset="utf-8"></script>
+<!-- 请在chrome浏览器中获得更好的浏览体验 -->
 
-}
-	$(document).ready(function(){
-		// 菜单栏吸住头部
-		$(document).scroll(function() {
-			//设置头部菜单栏
-				var scrollTopOfwindow = $(document).scrollTop();
-				var adHeight = $('#z_div_index_ad').height();
-				if (scrollTopOfwindow > adHeight) {
-					$("#z_div_menu").css("width","100%");
-					$("#z_div_menu").css("position","fixed");
-					$("#z_div_menu").css("top","0");
-					$("#z_div_win8block").css("margin-top","50px");
-				}else {
-					$("#z_div_menu").css("position","static");
-					$("#z_div_win8block").css("margin-top","0px");
-				}
-
-				//设置滑动效果
-				$(".slideanim").each(function(){
-			    var pos = $(this).offset().top;
-
-			    var winTop = $(window).scrollTop();
-			    if (pos < winTop + 600) {
-			      $(this).addClass("slidein");
-			    }
-			  });
-
-  	});
-
-		$(window).resize(changeHeightOfComesoon);
-
-
-
-	})
-
-	//页面加载完成后即修改一次高度
-	window.onload = function(){
-		changeHeightOfComesoon();
-	}
-</script>
 </head>
 
 <body>
+	<!-- 首页大广告 -->
 <div id="z_div_index_ad" class="carousel slide" data-ride="carousel">
 	<!-- 轮播图小圆点 -->
 	<ol class="carousel-indicators">
@@ -205,6 +160,7 @@ function changeHeightOfComesoon() {
 		<div class="col-sm-12 container-fluid slideanim" id="z_div_comesoon_content">
 				<hr>
 					<!-- 每个图片 -->
+					<!-- item card item back四个是一个整体，不要随意拆分 -->
 				<div class="z_div_comesoon_item col-sm-3">
 						<div class="z_div_3Drevolve_item col-sm-10 col-sm-push-1">
 							<div class="z_div_3Drevolve_card">
@@ -261,7 +217,6 @@ function changeHeightOfComesoon() {
 <!-- 影院介绍 -->
 <div id="z_div_cinema" class="container-fluid">
     <div class="col-sm-12">
-        <!-- 布局，居于正中 -->
         <div class="col-sm-push-1 col-sm-10 container-fluid">
             <div id="z_div_cinema_header" class="container_fluid">
               <span id="z_div_cinema_header_title">影院介绍/<span>Cinema</span></span>
@@ -372,63 +327,12 @@ function changeHeightOfComesoon() {
         </div>
     </div>
 </div>
-<script type="text/javascript">
-// 最后一栏变宽变窄的动画
-		$(".z_div_cinema_content_item").click(function(){
-			var diaplayBlock = $('.z_div_cinema_content_item_display');
-			if($(this).css("width") != diaplayBlock.css("width")){
-
-
-				diaplayBlock.animate({width:"10%"});
-				$(this).animate({width:"40%"});
-				diaplayBlock.attr("class","z_div_cinema_content_item z_div_cinema_content_all");
-				$(this).attr("class","z_div_cinema_content_item_display z_div_cinema_content_all");
-			}
-		});
-
-// win8-block的模糊动画开始
-	$('.z_div_win8block_content_item').mouseenter(function() {
-		var focus = $(this).find("img");
-		var focusword = $(this).find(".z_div_win8block_content_item_word");
-
-		$({blurRadius: 0}).animate({blurRadius: 5}, {
-		    duration: 250,
-		    easing: 'swing', // or "linear"
-		                     // use jQuery UI or Easing plugin for more options
-		    step: function() {
-		        focus.css({
-		            "-webkit-filter": "blur("+this.blurRadius+"px)",
-		            "filter": "blur("+this.blurRadius+"px)"
-		    });
-		  }
-		});
-		focus.animate({opacity:0.3});
-		focusword.animate({opacity:1});
-	});
-
-	$('.z_div_win8block_content_item').mouseleave(function() {
-		var focus = $(this).find("img");
-		var focusword = $(this).find(".z_div_win8block_content_item_word");
-		$({blurRadius: 5}).animate({blurRadius: 0}, {
-		    duration: 250,
-		    easing: 'swing', // or "linear"
-		                     // use jQuery UI or Easing plugin for more options
-		    step: function() {
-		        focus.css({
-		            "-webkit-filter": "blur("+this.blurRadius+"px)",
-		            "filter": "blur("+this.blurRadius+"px)"
-		    });
-		  }
-		});
-		focus.animate({opacity:1});
-		focusword.animate({opacity:0});
-	});
-// win8-block模糊动画
-</script>
 <!-- 脚部 -->
 <div id="z_div_footer" class="container-fluid text-center col-sm-12 clearfix" >
     <p >Copyright © 2015.Design by our team</p>
 </div>
 
+<!-- 页面效果动画加载 -->
+<script src="./js/index_animate.js" charset="utf-8"></script>
 </body>
 </html>

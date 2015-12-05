@@ -2,7 +2,7 @@ body{
 	background-color: #101010;
 }
 
-/*滑动动画效果*/
+/*滑动动画效果,在chrome下获得较好的浏览体验*/
 .slideanim {visibility:hidden;}
 .slidein {
     /* The name of the animation */
