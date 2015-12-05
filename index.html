@@ -13,8 +13,11 @@ function changeHeightOfComesoon() {
 	// 自动调整comesoon的高度
 	var img = $(".z_div_3Drevolve_front").find("img");
 	var imgHeight = img.height()+"px";
+	var halfImgHeight = img.height()/2 + "px";
 	$('.z_div_comesoon_item').css("height",imgHeight);
 	$('.z_div_3Drevolve_back').css("height",imgHeight);
+
+	$('.z_div_3Drevolve_back').find("h1").css("line-height",halfImgHeight);
 
 }
 	$(document).ready(function(){
@@ -163,19 +166,19 @@ function changeHeightOfComesoon() {
                     <div class="container-fluid col-sm-4 z_div_win8block_content_item">
                         <img src="./img/left-bottom.png">
 												<div class="z_div_win8block_content_item_word text-center" >
-													<h3>蚁人<br>正在热映</h3>
+													<h3>蚁人</h3>
 												</div>
                     </div>
                     <div class="container-fluid col-sm-4 z_div_win8block_content_item">
                         <img src="./img/left-bottom.png">
 												<div class="z_div_win8block_content_item_word text-center" >
-													<h3>蚁人<br>正在热映</h3>
+													<h3>蚁人</h3>
 												</div>
                     </div>
                     <div class="container-fluid col-sm-4 z_div_win8block_content_item">
                         <img src="./img/left-bottom.png">
 												<div class="z_div_win8block_content_item_word text-center" >
-													<h3>蚁人<br>正在热映</h3>
+													<h3>蚁人</h3>
 												</div>
                     </div>
                 </div>
@@ -218,20 +221,57 @@ function changeHeightOfComesoon() {
         </div>
     </div>
 		<div class="col-sm-12 z_div_comesoon_content container-fluid" style="padding:0 0 60px 0;">
-			<!-- 每个图片 -->
 				<hr style="border-color:red;border-width:2px;">
-				<div class="z_div_comesoon_item col-sm-3"style="padding-left:0;padding-right:">
+					<!-- 每个图片 -->
+				<div class="z_div_comesoon_item col-sm-3"style="padding-left:0;padding-right:0;">
 						<div class="z_div_3Drevolve_item col-sm-10 col-sm-push-1">
 							<div class="z_div_3Drevolve_card">
 								<div class="z_div_3Drevolve_front">
 									<img src="./img/comesoon_ad1.jpg" alt="" style="width:100%;"/>
 								</div>
-								<div class="z_div_3Drevolve_back text-center" style="">
-									<h3 style="color:white;">寻龙诀<br>12月18日上映</h3>
+								<div class="z_div_3Drevolve_back text-center" style="background:url(img/comesoon_ad1_back.png)">
+									<h1 style="color:white;text-shadow:1px 1px 4px #000;">寻龙诀<br><span style="font-size:20px;">12月18日上映</span></h1>
 								</div>
 							</div>
 						</div>
 				</div>
+				<div class="z_div_comesoon_item col-sm-3"style="padding-left:0;padding-right:0;">
+						<div class="z_div_3Drevolve_item col-sm-10 col-sm-push-1">
+							<div class="z_div_3Drevolve_card">
+								<div class="z_div_3Drevolve_front">
+									<img src="./img/comesoon_ad1.jpg" alt="" style="width:100%;"/>
+								</div>
+								<div class="z_div_3Drevolve_back text-center" style="background:url(img/comesoon_ad1_back.png)">
+									<h1 style="color:white;text-shadow:1px 1px 4px #000;">寻龙诀<br><span style="font-size:20px;">12月18日上映</span></h1>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="z_div_comesoon_item col-sm-3"style="padding-left:0;padding-right:0;">
+						<div class="z_div_3Drevolve_item col-sm-10 col-sm-push-1">
+							<div class="z_div_3Drevolve_card">
+								<div class="z_div_3Drevolve_front">
+									<img src="./img/comesoon_ad1.jpg" alt="" style="width:100%;"/>
+								</div>
+								<div class="z_div_3Drevolve_back text-center" style="background:url(img/comesoon_ad1_back.png)">
+									<h1 style="color:white;text-shadow:1px 1px 4px #000;">寻龙诀<br><span style="font-size:20px;">12月18日上映</span></h1>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="z_div_comesoon_item col-sm-3"style="padding-left:0;padding-right:0;">
+						<div class="z_div_3Drevolve_item col-sm-10 col-sm-push-1">
+							<div class="z_div_3Drevolve_card">
+								<div class="z_div_3Drevolve_front">
+									<img src="./img/comesoon_ad1.jpg" alt="" style="width:100%;"/>
+								</div>
+								<div class="z_div_3Drevolve_back text-center" style="background:url(img/comesoon_ad1_back.png)">
+									<h1 style="color:white;text-shadow:1px 1px 4px #000;">寻龙诀<br><span style="font-size:20px;">12月18日上映</span></h1>
+								</div>
+							</div>
+						</div>
+				</div>
+
 		</div>
 </div>
 
