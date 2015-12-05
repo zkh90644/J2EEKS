@@ -3,9 +3,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-<script src="./js/jquery.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="./css/cinema_list.css">
+<script src="./javascript/jquery.js"></script>
+<script src="./javascript/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/cinema.css">
 </head>
 <body>
 <!-- 菜单栏 -->
@@ -57,21 +57,21 @@
         <!-- 轮播图内容 -->
         <div class="carousel-inner">
             <div class="item active">
-                <img src="./img/1.png">
+                <img src="./images/cinema/1.png">
                 <div class="carousel-caption">
                     <h3>电影院名字一</h3>
                     <p>此处可以放置电影院的介绍</p>
                 </div>
             </div>
             <div class="item">
-                <img src="./img/2.png">
+                <img src="./images/cinema/2.png">
                 <div class="carousel-caption">
                     <h3>电影院名字二</h3>
                     <p>此处可以放置电影院的介绍</p>
                 </div>
             </div>
             <div class="item">
-                <img src="./img/3.png">
+                <img src="./images/cinema/3.png">
                 <div class="carousel-caption">
                     <h3>电影院名字三</h3>
                     <p>此处可以放置电影院的介绍</p>
@@ -115,7 +115,7 @@
         </div>
 
         <div class="z_div_cinema_list_content clearfix">
-                <div class="z_div_cinema_list_item container-fluid" onclick="window.location='http://www.baidu.com'">
+                <div class="z_div_cinema_list_item container-fluid" onclick="window.location='#'">
                     <div class="col-sm-8" >
                         <span><h3>电影院A</h3></span>
                         <div>
@@ -125,12 +125,12 @@
                         <h5>更多：</h5>
                     </div>
                     <div class="col-sm-4">
-                        <img class="img-responsive" src="./img/1.jpg"><!-- 在小屏幕的时候记得加margin -->
+                        <img class="img-responsive" src="./images/cinema/1.jpg"><!-- 在小屏幕的时候记得加margin -->
                     </div>
 
                 </div>
 
-                <div class="z_div_cinema_list_item container-fluid" onclick="window.location='http://www.baidu.com'">
+                <div class="z_div_cinema_list_item container-fluid" onclick="window.location='#'">
                     <div class="col-sm-8">
                         <span><h3>电影院A</h3></span>
                         <div>
@@ -140,12 +140,12 @@
                         <h5>更多：</h5>
                     </div>
                     <div class="col-sm-4">
-                        <img class="img-responsive" src="./img/1.jpg"><!-- 在小屏幕的时候记得加margin -->
+                        <img class="img-responsive" src="./images/cinema/1.jpg"><!-- 在小屏幕的时候记得加margin -->
                     </div>
 
                 </div>
 
-                <div class="z_div_cinema_list_item container-fluid" onclick="window.location='http://www.baidu.com'">
+                <div class="z_div_cinema_list_item container-fluid" onclick="window.location='#'">
                     <div class="col-sm-8">
                         <span><h3>电影院A</h3></span>
                         <div>
@@ -155,11 +155,11 @@
                         <h5>更多：</h5>
                     </div>
                     <div class="col-sm-4">
-                        <img class="img-responsive" src="./img/1.jpg"><!-- 在小屏幕的时候记得加margin -->
+                        <img class="img-responsive" src="./images/cinema/1.jpg"><!-- 在小屏幕的时候记得加margin -->
                     </div>
 
                 </div>
-                <div class="z_div_cinema_list_item container-fluid" onclick="window.location='http://www.baidu.com'">
+                <div class="z_div_cinema_list_item container-fluid" onclick="window.location='#'">
                     <div class="col-sm-8">
                         <span><h3>电影院A</h3></span>
                         <div>
@@ -169,12 +169,12 @@
                         <h5>更多：</h5>
                     </div>
                     <div class="col-sm-4">
-                        <img class="img-responsive" src="./img/1.jpg"><!-- 在小屏幕的时候记得加margin -->
+                        <img class="img-responsive" src="./images/cinema/1.jpg"><!-- 在小屏幕的时候记得加margin -->
                     </div>
 
                 </div>
 
-                <div class="z_div_cinema_list_item container-fluid" onclick="window.location='http://www.baidu.com'">
+                <div class="z_div_cinema_list_item container-fluid" onclick="window.location='#'">
                     <div class="col-sm-8">
                         <span><h3>电影院A</h3></span>
                         <div>
@@ -184,7 +184,7 @@
                         <h5>更多：</h5>
                     </div>
                     <div class="col-sm-4">
-                        <img class="img-responsive" src="./img/1.jpg"><!-- 在小屏幕的时候记得加margin -->
+                        <img class="img-responsive" src="./images/cinema/1.jpg"><!-- 在小屏幕的时候记得加margin -->
                     </div>
 
                 </div>
@@ -204,6 +204,7 @@
     <!-- 列表内容结束 -->
 
     <!-- 侧列排名 -->
+    <!-- 动态进度条通过设置style里面的width来进行设置长度，与div中的数字无关 -->
     <div id="z_div_cinema_banner" class="col-sm-3 container-fluid">
         <h3>影院排行</h3>
         <ul id="z_div_cinema_banner_list" class="list-group">

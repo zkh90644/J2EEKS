@@ -5,8 +5,7 @@
 
 		$({blurRadius: 0}).animate({blurRadius: 5}, {
 		    duration: 250,
-		    easing: 'swing', // or "linear"
-		                     // use jQuery UI or Easing plugin for more options
+		    easing: 'swing',
 		    step: function() {
 		        focus.css({
 		            "-webkit-filter": "blur("+this.blurRadius+"px)",
@@ -23,8 +22,7 @@
 		var focusword = $(this).find(".z_div_win8block_content_item_word");
 		$({blurRadius: 5}).animate({blurRadius: 0}, {
 		    duration: 250,
-		    easing: 'swing', // or "linear"
-		                     // use jQuery UI or Easing plugin for more options
+		    easing: 'swing',
 		    step: function() {
 		        focus.css({
 		            "-webkit-filter": "blur("+this.blurRadius+"px)",

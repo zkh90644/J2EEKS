@@ -59,7 +59,7 @@ body{
 
 #z_div_win8block{
 	 padding:0px;
-	 background:url(../img/background-onMovie.jpg);
+	 background:url(../images/index/background-onMovie.jpg);
 }
 
 #z_div_win8block_content{
@@ -197,7 +197,7 @@ body{
 }
 
 .z_div_3Drevolve_back{
-		background:url(../img/comesoon_ad1_back.png);
+		background:url(../images/index/comesoon_ad1_back.png);
 		-webkit-transform:rotateY(180deg);
 		-moz-transform:rotateY(180deg);
 }
