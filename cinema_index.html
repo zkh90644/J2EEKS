@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>我的影院</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <script src="./javascript/jquery.js"></script>
+    <script src="./javascript/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="div1" class=""  onscroll="document.getElementById('div2').scrollTop = this.scrollTop;">
+
+      <div style="width:800px; height:50px;"></div>
+
+    </div>
+
+
+    <div id="div2" style="width:500px; overflow:scroll;"  onscroll="document.getElementById('div1').scrollTop = this.scrollTop;">
+
+      <div style="width:800px; height:50px;"></div>
+
+    </div>
+  </body>
+</html>
