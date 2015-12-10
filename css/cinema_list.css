@@ -1,0 +1,122 @@
+body{
+  background-color: #101010;
+}
+
+hr{
+    border-color:red;
+}
+
+#z_div_menu >.navbar{
+    border-bottom-width:0px;
+    opacity:0.9;
+    margin-bottom: 0px;
+}
+
+#z_div_cinema_ad{
+    margin-top: 50px; /*50为菜单栏高度*/
+}
+
+#z_div_cinema_ad > .carousel-inner > .item > img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+#z_div_cinema_banner h3{
+    color: white;
+}
+
+#z_div_cinema_list_header{
+     margin-top:20px;
+     color:#fff;
+}
+
+#z_div_cinema_list{
+}
+
+.btn-link{
+    color: #fff;
+    text-decoration: none;
+}
+.btn-link:hover,.btn-link:active,.btn-link:visited{
+    color: red;
+    text-decoration: none;
+}
+
+.z_div_cinema_list_content{
+    color: #fff;
+}
+
+.z_div_cinema_list_item{
+    background-color: #101010;
+    margin-bottom: 20px;
+    transition: box-shadow 0.5s,background-color 0.5s;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.z_div_cinema_list_item:hover{
+    cursor: pointer;
+    background-color: #606060;
+    box-shadow: 0px 0px 20px rgba(255,255,255,.4);
+}
+
+.z_div_cinema_list_item > .col-sm-4 > .img-responsive{
+    margin-top:30px;
+    margin-bottom:30px;
+    top:50%;
+}
+
+#z_div_cinema_pagination > ul{
+      color:red;
+}
+
+#z_div_cinema_pagination > ul > li{
+    border-width: 0px;
+}
+
+#z_span_pagination_left{
+    margin-top:-1px;
+    margin-right:1px;
+
+}
+
+#z_span_pagination_right{
+    margin-top: -1px;
+    /*margin-left: 1px;*/
+}
+
+
+.pagination>li>a, .pagination>li>span{
+    background-color: #101010;
+    color: white;
+    border-color: white;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover{
+    background-color: #4c5b9e;
+    color: white;
+    border-top-color: white;
+    border-bottom-color: white;
+    border-right-color: white;
+}
+
+#z_div_footer{
+    line-height: 50px;
+    color: white;
+    background-color: #181818;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    #z_div_cinema_banner{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #z_div_cinema_banner{
+        display: block;
+    }
+}
