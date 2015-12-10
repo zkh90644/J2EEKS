@@ -71,6 +71,10 @@ hr{
   color:white;
 }
 
+#z_div_list_menu > ul > li a:hover,#z_div_list_menu > ul > li a:focus{
+  background-color:#6b6b6b;
+}
+
 #z_div_list_menu > ul > li img{
   width: 9%;
   height:9%;
