@@ -6,144 +6,51 @@
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <script src="./javascript/jquery.js"></script>
     <script src="./javascript/bootstrap.min.js"></script>
-    <script type="text/javascript">
-    </script>
-    <style media="screen">
-      body{
-        background-color: #f1f1f1;
-      }
-      #z_div_list_menu > ul > li a{
-        font-size: 18px;
-        color:white;
-      }
-      #z_div_list_menu > ul > li img{
-        width: 9%;
-        height:9%;
-        margin: -3px 5px 0 5px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/cinema_index_sidebar.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-<div id="z_div_sidebar" class="container-fluid" style="color:white;background:url(images/select_cinema/sidebar_background.png);background-size:cover;padding-left:0px;padding-right:0px;box-shadow:1px 1px 2px black;position:fixed;height:100%;width:200px;">
-  <!-- 关闭按钮 -->
-  <div class="text-right">
-    <img src="images/select_cinema/sidebar-close.png" alt="关闭按钮" id="z_div_sidebar_close" onclick=hideSiderBar()  style="margin-right:5px;width:10px;height:10px;"/>
-  </div>
-  <!-- 菜单按钮 -->
-  <div class="text-center" id="z_img_menu_list" style="display:none">
-    <img src="images/select_cinema/menu_img.png" alt="" onclick=showSiderBar() style="width:20px;height:13px;margin-top:20px;opacity:0;"/>
-  </div>
-  <!-- 个人信息 -->
-  <div id="z_div_self_message" style="margin-top:40px;" class="col-sm-12 container-fluid">
-    <div class="col-sm-6 text-right" id="z_div_hello_world" style="margin-top:10px;padding-left:0px;padding-right:0px;">
-      <span>XXX</span><br>
-      <span style="font-size:20px;">欢迎回来</span>
+    <!-- 侧边栏完成 -->
+  <div id="z_div_sidebar" class="container-fluid">
+    <!-- 关闭按钮 -->
+    <div class="text-right">
+      <img src="images/select_cinema/sidebar-close.png" alt="close" id="z_div_sidebar_close" onclick=hideSiderBar() />
     </div>
-    <div class="col-sm-6" id="z_div_self_image">
-      <img src="images/select_cinema/self_image.png" alt="" class="img-circle" style="width:80%;height:80%;border:3px solid transparent;background-color:white;"/>
+    <!-- 菜单按钮 -->
+    <div class="text-center" id="z_img_menu_list">
+      <img src="images/select_cinema/menu_img.png" alt="menuButton" onclick=showSiderBar()/>
+    </div>
+    <!-- 个人信息 -->
+    <div id="z_div_self_message" class="col-sm-12 container-fluid">
+      <div class="col-sm-6 text-right" id="z_div_hello_world">
+        <span>XXX</span><br>
+        <span>欢迎回来</span>
+      </div>
+      <div class="col-sm-6" id="z_div_self_image">
+        <img src="images/select_cinema/self_image.png" alt="" class="img-circle"/>
+      </div>
+    </div>
+    <!-- 分割线 -->
+    <div class="col-sm-12">
+      <hr>
+    </div>
+    <!-- 菜单栏 -->
+    <div id="z_div_list_menu" class="col-sm-12 container-fluid">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/info_logo.png" alt="" /><span class="z_div_list_menu_item_message">信息修改</span></a></li>
+        <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/yingting_logo.png" alt="" /><span class="z_div_list_menu_item_message">影院增删</span></a></li>
+        <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/search_logo.png" alt="" /><span class="z_div_list_menu_item_message">订票情况</span></a></li>
+        <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/film_logo.png" alt="" /><span class="z_div_list_menu_item_message">电影增删</span></a></li>
+      </ul>
+    </div>
+    <!-- 退出按钮 -->
+    <div class="text-right" id="z_div_logout">
+      <a href="#" id="z_a_logout_button"><img src="images/select_cinema/logout_logo.png" alt="" id="z_img_logout_logo"/><span>退出</span></a>
     </div>
   </div>
-  <!-- 分割线 -->
-  <div class="col-sm-12">
-    <hr style="border-color:white;">
+
+  <div class="">
+
   </div>
-  <!-- 菜单栏 -->
-  <div id="z_div_list_menu" class="col-sm-12 container-fluid" style="padding-left:0px;padding-right:0px;">
-    <ul class="nav nav-pills nav-stacked" style="">
-      <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/info_logo.png" alt="" /><span class="z_div_list_menu_item_message">信息修改</span></a></li>
-      <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/yingting_logo.png" alt="" /><span class="z_div_list_menu_item_message">影院增删</span></a></li>
-      <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/search_logo.png" alt="" /><span class="z_div_list_menu_item_message">订票情况</span></a></li>
-      <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/film_logo.png" alt="" /><span class="z_div_list_menu_item_message">电影增删</span></a></li>
-    </ul>
-  </div>
-
-  <!-- 退出按钮 -->
-  <div class="text-right" style="position:absolute;right:5px;bottom:15px;">
-    <a href="#" id="z_a_logout_button" style="font-size:13px;color:white;opacity:0.65;"><img src="images/select_cinema/logout_logo.png" alt="" id="z_img_logout_logo" style="height:15px;width:15px;"/><span style="margin:2px;line-height:18px;">退出</span></a>
-  </div>
-
-</div>
-<script type="text/javascript">
-
-  // 整个sidebar
-  var sidebar = $('#z_div_sidebar');
-  // 关闭按钮
-  var closelogo = $('#z_div_sidebar_close');
-  // 分割线
-  var hr = $('#z_div_sidebar').find('hr');
-  // 选择文字
-  var itemWords = $('.z_div_list_menu_item_message');
-  // 选择的logo
-  var itemImage = $('.z_div_list_menu_item_image');
-  // 个人信息
-  var selfMessage = $('#z_div_self_message');
-  // 菜单按钮
-  var menuListDiv =  $('#z_img_menu_list');
-  var menuListButton = menuListDiv.find('img');
-  // 登出按钮
-  var logoutMessage = $('#z_a_logout_button').find('span');
-  var logoutLogo = $('#z_a_logout_button').find('img');
-
-    //点击后菜单栏左移
-  function hideSiderBar() {
-    // 首先都变成透明
-    closelogo.animate({"opacity":"0"});
-    logoutMessage.animate({"opacity":"0"});
-    selfMessage.animate({"opacity":"0"});
-    hr.animate({"opacity":"0"});
-    itemWords.animate({"opacity":"0"});
-    itemImage.animate({"opacity":"0"},changeWidth);
-    logoutLogo.animate({"opacity":"0"});
-
-    function changeWidth() {
-
-      itemWords.css({"display":"none"});
-      closelogo.css({"display":"none"});
-      selfMessage.css({"display":"none"});
-      itemImage.css({"width":"20px","height":"20px","margin":"0"});
-      sidebar.animate({"width":"50px"},showImage);
-      logoutMessage.css({"display":"none"});
-      menuListDiv.css({"display":"block"});
-      logoutLogo.parent().parent().css({"right":"15px"});
-    }
-
-    function showImage() {
-      menuListButton.animate({"opacity":"0.8"});
-      itemImage.animate({"opacity":"1"});
-      logoutLogo.animate({"opacity":"0.65"});
-    }
-
-  }
-
-  function showSiderBar() {
-      menuListButton.animate({"opacity":"0"});
-      itemImage.animate({"opacity":"0"});
-      logoutLogo.animate({"opacity":"0"},changeWidth);
-
-      function changeWidth() {
-        itemWords.css({"display":"inline"});
-        closelogo.css({"display":"inline"});
-        selfMessage.css({"display":"inline"});
-        itemImage.css({"width":"9%","height":"9%","margin":"-3px 5px 0 5px"});
-        logoutMessage.css({"display":"inline"});
-        menuListDiv.css({"display":"none"});
-        logoutLogo.parent().parent().css({"right":"5px"});
-        sidebar.animate({"width":"200px"},showImage);
-      }
-
-      function showImage(argument) {
-        closelogo.animate({"opacity":"1"});
-        selfMessage.animate({"opacity":"1"});
-        hr.animate({"opacity":"1"});
-        itemWords.animate({"opacity":"1"});
-        itemImage.animate({"opacity":"1"});
-        logoutMessage.animate({"opacity":"0.65"});
-        logoutLogo.animate({"opacity":"0.65"});
-      }
-  }
-
-
-
-</script>
+  <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,0 +1,102 @@
+body{
+  background-color: #f1f1f1;
+}
+
+hr{
+   border-color:white;
+}
+
+/*侧边栏整体*/
+#z_div_sidebar{
+  color:white;
+  background:url(../images/select_cinema/sidebar_background.png);
+  background-size:cover;
+  padding-left:0px;
+  padding-right:0px;
+  box-shadow:1px 1px 2px black;
+  position:fixed;
+  height:100%;
+  width:200px;
+}
+
+/*关闭按钮*/
+#z_div_sidebar_close{
+  margin-right:5px;
+  width:10px;
+  height:10px;
+}
+
+/*菜单按钮*/
+#z_img_menu_list{
+  display:none;
+}
+
+#z_img_menu_list > img{
+  width:20px;
+  height:13px;
+  margin-top:20px;
+  opacity:0;
+}
+
+#z_div_self_message{
+  margin-top:40px;
+}
+
+/*欢迎回来几个字*/
+#z_div_hello_world{
+  padding-left:0px;
+  padding-right:0px;
+}
+/*欢迎回来第二行*/
+#z_div_hello_world span:last-child{
+  font-size:20px;
+}
+
+/*登录头像*/
+#z_div_self_image > img{
+  width:100%;
+  height:100%;
+  border:3px solid transparent;
+  background-color:white;
+}
+
+/*菜单*/
+#z_div_list_menu{
+  padding-left:0px;
+  padding-right:0px;
+}
+
+#z_div_list_menu > ul > li a{
+  font-size: 18px;
+  color:white;
+}
+
+#z_div_list_menu > ul > li img{
+  width: 9%;
+  height:9%;
+  margin: -3px 5px 0 5px;
+}
+
+/*退出*/
+#z_div_logout{
+  position:absolute;
+  right:5px;
+  bottom:15px;
+}
+
+#z_div_logout > span {
+  margin:2px;
+  line-height:18px;
+}
+
+#z_a_logout_button{
+  font-size:13px;
+  color:white;
+  opacity:0.65;
+  text-decoration: none;
+}
+
+#z_img_logout_logo{
+  height:15px;
+  width:15px;
+}
