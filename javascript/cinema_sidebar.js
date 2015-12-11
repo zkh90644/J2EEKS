@@ -1,3 +1,6 @@
+$(function () { $('#z_ul_cinema_set').collapse({toggle: false})});
+$(function () { $('#z_ul_film_set').collapse({toggle: false})});
+
 // 整个sidebar
 var sidebar = $('#z_div_sidebar');
 // 关闭按钮
@@ -8,6 +11,13 @@ var hr = $('#z_div_sidebar').find('hr');
 var itemWords = $('.z_div_list_menu_item_message');
 // 选择的logo
 var itemImage = $('.z_div_list_menu_item_image');
+// 二级菜单
+var secondItem = $('.list-unstyled');
+var secondLi = $('.list-unstyled li');
+var secondMessage = $('.list-unstyled span');
+var secondImage = $('.list-unstyled img');
+var secondImage = $('.list-unstyled img');
+var secondDiffLi = $('.z_img_secondLi');
 // 个人信息
 var selfMessage = $('#z_div_self_message');
 // 菜单按钮
@@ -28,6 +38,8 @@ function hideSiderBar() {
   itemImage.animate({"opacity":"0"},changeWidth);
   logoutLogo.animate({"opacity":"0"});
 
+  secondItem.animate({"opacity":"0"});
+  // 左移动作
   function changeWidth() {
 
     itemWords.css({"display":"none"});
@@ -38,12 +50,28 @@ function hideSiderBar() {
     logoutMessage.css({"display":"none"});
     menuListDiv.css({"display":"block"});
     logoutLogo.parent().parent().css({"right":"15px"});
+
+    secondItem.css({"background-size":"50px 64px"});
+    secondMessage.each(function () {
+      $(this).css({"display":"none"});
+    });
+    secondImage.each(function () {
+      $(this).css({"display":"block"});
+    });
+    secondLi.each(function () {
+      $(this).css({"paddingTop":"10px"});
+    });
+    secondDiffLi.each(function () {
+      $(this).css({"paddingBottom":"10px"});
+    });
   }
 
   function showImage() {
     menuListButton.animate({"opacity":"0.8"});
     itemImage.animate({"opacity":"1"});
     logoutLogo.animate({"opacity":"0.65"});
+
+    secondItem.animate({"opacity":"1"});
   }
 
 }
@@ -52,6 +80,8 @@ function showSiderBar() {
     menuListButton.animate({"opacity":"0"});
     itemImage.animate({"opacity":"0"});
     logoutLogo.animate({"opacity":"0"},changeWidth);
+
+    secondItem.animate({"opacity":"0"});
 
     function changeWidth() {
       itemWords.css({"display":"inline"});
@@ -62,6 +92,21 @@ function showSiderBar() {
       menuListDiv.css({"display":"none"});
       logoutLogo.parent().parent().css({"right":"5px"});
       sidebar.animate({"width":"200px"},showImage);
+
+
+      secondItem.css({"background-size":"200px 80px"});
+      secondMessage.each(function () {
+        $(this).css({"display":"inline"});
+      });
+      secondImage.each(function () {
+        $(this).css({"display":"none"});
+      });
+      secondLi.each(function () {
+        $(this).css({"paddingTop":"0"});
+      });
+      secondDiffLi.each(function () {
+        $(this).css({"paddingBottom":"0"});
+      });
     }
 
     function showImage(argument) {
@@ -72,5 +117,6 @@ function showSiderBar() {
       itemImage.animate({"opacity":"1"});
       logoutMessage.animate({"opacity":"0.65"});
       logoutLogo.animate({"opacity":"0.65"});
+      secondItem.animate({"opacity":"1"});
     }
 }

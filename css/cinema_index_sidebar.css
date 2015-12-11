@@ -10,13 +10,14 @@ hr{
 #z_div_sidebar{
   color:white;
   background:url(../images/select_cinema/sidebar_background.png);
-  background-size:cover;
+  background-size:200px;
   padding-left:0px;
   padding-right:0px;
   box-shadow:1px 1px 2px black;
   position:fixed;
   height:100%;
   width:200px;
+  z-index: 100;
 }
 
 /*关闭按钮*/
@@ -71,7 +72,7 @@ hr{
   color:white;
 }
 
-#z_div_list_menu > ul > li a:hover,#z_div_list_menu > ul > li a:focus{
+#z_div_list_menu > ul > li > a:hover,#z_div_list_menu > ul > li > a:focus{
   background-color:#6b6b6b;
 }
 
@@ -79,6 +80,24 @@ hr{
   width: 9%;
   height:9%;
   margin: -3px 5px 0 5px;
+}
+
+#z_div_list_menu .list-unstyled{
+  background:url(../images/select_cinema/sidebar_dropdown_background.png);
+  background-size:200px 80px;
+}
+
+#z_div_list_menu .list-unstyled img{
+  display:none;
+  width:20px;
+  height:20px;
+  margin-left: 15px;
+}
+
+#z_div_list_menu .list-unstyled li > a{
+  font-size:16px;
+  line-height:40px;
+  color:#383838;
 }
 
 /*退出*/
