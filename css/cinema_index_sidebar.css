@@ -98,6 +98,7 @@ hr{
   font-size:16px;
   line-height:40px;
   color:#383838;
+  text-decoration: none;
 }
 
 /*退出*/
@@ -122,4 +123,13 @@ hr{
 #z_img_logout_logo{
   height:15px;
   width:15px;
+}
+
+@media screen and (max-width:767px) {
+  .img-circle{
+    display:none;
+  }
+  #z_div_hello_world{
+    text-align: center;
+  }
 }

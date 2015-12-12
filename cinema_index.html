@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>电影</title>
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    <script src="./javascript/jquery.js"></script>
-    <script src="./javascript/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/cinema_index_sidebar.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/cinema_content_index.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-    <!-- 侧边栏完成 -->
+    <!-- 侧边栏 -->
   <div id="z_div_sidebar" class="container-fluid">
     <!-- 关闭按钮 -->
     <div class="text-right">
@@ -60,9 +61,56 @@
     </div>
   </div>
 
-  <div class="container-fluid col-sm-12" style="background-color:red;heigth:20px;">
+    <!-- 内容展示 -->
+  <div class="container-fluid col-sm-12" id="z_div_content" >
+    <div id="z_div_container">
+      <div class="text-left">
+        <h2>基本信息</h2>
+      </div>
+      <form class="form-inline" action="#" method="post">
+        <div id="z_form_img">
+          <img src="images/select_cinema/self_image.png" alt="个人头像" class="img-circle"/>
+        </div>
+        <div class="z_form_div">
+          <label for="cinema_name" class="text-center">影院名称：</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="z_form_div">
+          <label for="cinema_address" class="text-center">影院地址：</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="z_form_div">
+          <label for="cinema_tel" class="text-center">影院电话：</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="z_form_div">
+          <label for="cinema_intro" class="text-center">影院介绍：</label>
+          <textarea name="name" rows="10" cols="60" class="form-control"></textarea>
+        </div>
 
+        <!-- 上传海报的模块 -->
+        <div class="z_form_div">
+          <div class="col-sm-2">
+            <label for="cinema_posters" class="text-center">影院海报：</label>
+          </div>
+          <div class="col-sm-10" id="z_div_form_items">
+            <div id="z_div_from_firstItem">
+              <input type="file" name="upload-file" placeholder="点击上传文件">
+              <!-- margin-left为了解决按钮不排列在一列的问题。一样的代码，如果没有margin-left的话会导致这一行的按钮右移 -->
+              <button type="button" name="button" onclick=AddItem() class="btn btn-success btn-sm btn-circle" style="margin-left:2px;"><span class="glyphicon glyphicon-plus" style="padding-left:0px;"></span></button>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success" id="z_btn_submit" style="margin-top:20px;">
+          提交
+        </button>
+      </form>
+    </div>
   </div>
+
   <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
+  <script src="javascript/cinema_add_poster_item.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  </script>
   </body>
 </html>

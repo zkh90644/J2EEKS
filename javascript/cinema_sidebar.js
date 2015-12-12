@@ -1,3 +1,39 @@
+// 页面加载的函数，设置对应div_content的位置
+function changeLeftOfContent(time) {
+  // alert(time);
+  var sidebarWidth = $('#z_div_sidebar').css("width");
+  var contentWidth = $('#z_div_container').css("width");
+  sidebarWidth = parseInt(sidebarWidth);
+  contentWidth = parseInt(contentWidth);
+  var windowWidth = parseInt($(window).width());
+  // var contentMarginTop = $("#z_div_container").find('h2').offset().top;
+  var contentMarginTop = 10;
+  var changeWidth = windowWidth - sidebarWidth - contentWidth;
+  // 设置动画数据
+  if (changeWidth >= 0) {
+    changeWidth /= 2;
+    var left = sidebarWidth + changeWidth + contentMarginTop;
+  }else {
+    var left = sidebarWidth + contentMarginTop;
+  }
+  // 运行动画效果
+  if (time == "move") {
+    $('#z_div_container').animate({"left":left});
+  }else {
+    $('#z_div_container').css({"left":left});
+  }
+}
+
+$(document).ready(function () {
+  $(document).scroll(changeLeftOfContent);
+  $(window).resize(changeLeftOfContent);
+});
+
+window.onload = function () {
+  changeLeftOfContent();
+}
+
+
 $(function () { $('#z_ul_cinema_set').collapse({toggle: false})});
 $(function () { $('#z_ul_film_set').collapse({toggle: false})});
 
@@ -64,6 +100,7 @@ function hideSiderBar() {
     secondDiffLi.each(function () {
       $(this).css({"paddingBottom":"10px"});
     });
+
   }
 
   function showImage() {
@@ -72,6 +109,7 @@ function hideSiderBar() {
     logoutLogo.animate({"opacity":"0.65"});
 
     secondItem.animate({"opacity":"1"});
+    changeLeftOfContent("move");
   }
 
 }
@@ -107,6 +145,7 @@ function showSiderBar() {
       secondDiffLi.each(function () {
         $(this).css({"paddingBottom":"0"});
       });
+
     }
 
     function showImage(argument) {
@@ -118,5 +157,6 @@ function showSiderBar() {
       logoutMessage.animate({"opacity":"0.65"});
       logoutLogo.animate({"opacity":"0.65"});
       secondItem.animate({"opacity":"1"});
+      changeLeftOfContent("move");
     }
 }

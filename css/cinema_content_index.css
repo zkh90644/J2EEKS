@@ -1,0 +1,60 @@
+/*整体*/
+#z_div_content{
+  position:relative;
+}
+
+#z_div_container{
+  position:absolute;
+  left:200px;
+  margin-top:10px;
+}
+
+#z_div_container > form{
+  margin:20px 20px;
+}
+
+/*修改头像*/
+#z_form_img{
+  width:100px;position:absolute;left:350px;margin-top:5px;
+}
+
+/*头像图片*/
+#z_form_img > img{
+  width:100%;
+  border:5px solid transparent;
+  background:white;
+}
+
+.z_form_div{
+  margin:10px;
+  padding-left: 0px;
+}
+
+.z_form_div > .col-sm-2{
+  padding-left:0px;
+  padding-right:0px;
+  width:70px !important;
+}
+
+.z_form_div label{
+  line-height:35px;
+}
+
+.z_form_div > .col-sm-10{
+  padding-left:5px;
+  padding-right:0px;
+}
+
+.z_form_div > .col-sm-10 input{
+  width:200px;
+  display:inline;
+}
+
+.z_form_div > .col-sm-10 button{
+  margin:5px;
+  height:30px;
+  width:30px;
+  border-radius: 15px;
+  padding:6px 0;
+  text-align:center;
+}
