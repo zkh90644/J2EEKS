@@ -69,7 +69,9 @@
       </div>
       <form class="form-inline" action="#" method="post">
         <div id="z_form_img">
-          <img src="images/select_cinema/self_image.png" alt="个人头像" class="img-circle"/>
+          <input type="image" src="images/select_cinema/self_image.png" alt="个人头像" class="img-circle" name="z_form_img_click"/>
+          <!-- 用来上传头像 -->
+          <input type="file" name="z_form_img_file_upload" style="display:none;">
         </div>
         <div class="z_form_div">
           <label for="cinema_name" class="text-center">影院名称：</label>

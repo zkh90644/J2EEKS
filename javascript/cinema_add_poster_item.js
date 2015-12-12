@@ -11,3 +11,7 @@ function AddItem() {
   $('#z_div_new_add').animate({"opacity":"1"});
   $('#z_div_new_add').attr("id","");
 }
+
+$('input[type="image"]').click(function () {
+  $('input[name="z_form_img_file_upload"]').click();
+})

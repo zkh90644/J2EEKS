@@ -15,11 +15,14 @@
 
 /*修改头像*/
 #z_form_img{
-  width:100px;position:absolute;left:350px;margin-top:5px;
+  width:100px;
+  position:absolute;
+  left:350px;
+  margin-top:5px;
 }
 
 /*头像图片*/
-#z_form_img > img{
+#z_form_img > input{
   width:100%;
   border:5px solid transparent;
   background:white;
