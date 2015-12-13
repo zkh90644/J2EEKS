@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>电影</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/cinema_index_sidebar.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+    /*整体*/
+    #z_div_content{
+      position:relative;
+    }
+
+    #z_div_container{
+      position:absolute;
+      left:200px;
+      margin-top:10px;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- 侧边栏 -->
+  <div id="z_div_sidebar" class="container-fluid">
+    <!-- 关闭按钮 -->
+    <div class="text-right">
+      <img src="images/select_cinema/sidebar-close.png" alt="关闭按钮" id="z_div_sidebar_close" onclick=hideSiderBar() />
+    </div>
+    <!-- 菜单按钮 -->
+    <div class="text-center" id="z_img_menu_list">
+      <img src="images/select_cinema/menu_img.png" alt="菜单按钮" onclick=showSiderBar() />
+    </div>
+    <!-- 个人信息 -->
+    <div id="z_div_self_message" class="col-sm-12 container-fluid">
+      <div class="col-sm-6 text-right" id="z_div_hello_world">
+        <span>XXX</span><br>
+        <span>欢迎回来</span>
+      </div>
+      <div class="col-sm-6" id="z_div_self_image">
+        <img src="images/select_cinema/self_image.png" alt="个人头像" class="img-circle"/>
+      </div>
+    </div>
+    <!-- 分割线 -->
+    <div class="col-sm-12">
+      <hr>
+    </div>
+    <!-- 菜单栏 -->
+    <div id="z_div_list_menu" class="col-sm-12 container-fluid">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/info_logo.png" alt="个人消息" /><span class="z_div_list_menu_item_message">信息修改</span></a></li>
+        <li class="text-center" class="z_div_list_menu_item">
+          <a data-toggle="collapse" data-parent="#accordion" href="#z_ul_cinema_set"><img class="z_div_list_menu_item_image" src="images/select_cinema/yingting_logo.png" alt="影厅logo" /><span class="z_div_list_menu_item_message">影院增删</span></a>
+          <ul class="list-unstyled panel-collapse collapse" id="z_ul_cinema_set" >
+            <li><a href="#"><img src="images/select_cinema/yingyuan_add.png" alt="影院增加" /><span>影院增加</span></a></li>
+            <li class="z_img_secondLi"><a href="#"><img src="images/select_cinema/yingyuan_set.png" alt="影院删改" /><span>影院删改</span></a></li>
+          </ul>
+        </li>
+        <li class="text-center" class="z_div_list_menu_item">
+          <a data-toggle="collapse" data-parent="#accordion" href="#z_ul_film_set"><img class="z_div_list_menu_item_image" src="images/select_cinema/film_logo.png" alt="电影logo" /><span class="z_div_list_menu_item_message">电影增删</span></a>
+          <ul class="list-unstyled panel-collapse collapse" id="z_ul_film_set">
+            <li><a href="#" ><img src="images/select_cinema/film_add.png" alt="电影增加" /><span>电影增加</span></a></li>
+            <li class="z_img_secondLi"><a href="#"><img src="images/select_cinema/film_set.png" alt="电影删改" /><span>电影删改</span></a></li>
+          </ul>
+        </li>
+        <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/search_logo.png" alt="查询logo" /><span class="z_div_list_menu_item_message">订票情况</span></a></li>
+      </ul>
+    </div>
+    <!-- 退出按钮 -->
+    <div class="text-right" id="z_div_logout">
+      <a href="#" id="z_a_logout_button"><img src="images/select_cinema/logout_logo.png" alt="" id="z_img_logout_logo"/><span>退出</span></a>
+    </div>
+  </div>
+
+    <!-- 内容展示 -->
+  <div class="container-fluid col-sm-12" id="z_div_content" >
+    <div id="z_div_container">
+      <div class="text-left">
+        <h2>订票查询</h2>
+      </div>
+      <div class="container-fluid " style="width:700px;">
+
+        <div class="z_div_single_search col-sm-12 container-fluid" style="background-color:white;border-radius:15px;box-shadow:1px 1px 5px #ddd;padding:10px 20px;margin-bottom:20px;">
+          <div class="z_div_intro col-sm-12 container-fluid" style="padding:0px;position:relative;">
+            <h5><div class="text-left" style="position:absolute;width:100%;">电影名：火星救援</div><div class="text-center" style="position:absolute;width:100%;">影厅号：1号厅</div><div class="text-right">上映时间：13:00~15:00</div></h5>
+          </div>
+          <div class="z_div_intro col-sm-12 container-fluid" style="padding:0px;position:relative;">
+            <h5 style="float:left;margin-top:3px;">上座率：</h5>
+            <div style="display:absolute;float:right;">20/200</div>
+            <div class="" style="width:90%;">
+              <div class="progress" style="margin-bottom:0px;">
+                  <div class="progress-bar progress-bar-default progress-bar-striped active" style="width:10%">10%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 上下页 -->
+        <div style="width:50;height:50px;position:absolute;bottom:0px;">
+          <img src="images/select_cinema/pre_page.png" alt="" style="width:100%;z-index:100;"/>
+        </div>
+        <div style="width:50px;height:50px;position:absolute;bottom:0px;">
+          <img src="images/select_cinema/next_page.png" alt="" style="width:100%;z-index:100;"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
+  <script type="text/javascript">
+
+  // 滚动页面的时候更改界面
+  $(document).ready(function () {
+    $(document).scroll(changeLeftOfContent);
+    $(window).resize(changeLeftOfContent);
+  });
+
+  // 页面加载完的时候第一次加载
+  window.onload = function () {
+    changeLeftOfContent();
+  }
+  </script>
+  </body>
+</html>
