@@ -8,26 +8,7 @@
     <script src="javascript/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/cinema_index_sidebar.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/cinema_cinema_add.css" media="screen" title="no title" charset="utf-8">
-    <style media="screen">
-    .z_div_single_page,.z_div_single_page_add{
-      width:250px;
-      background:url(images/select_cinema/cinema_set_single_page.png);
-      background-size:250px 250px;
-      background-repeat:no-repeat;
-      padding:20px 20px 30px 20px;
-      float:left;
-    }
-
-    #z_div_page_add{
-      opacity:0.3;
-      transition: 0.5s all;
-    }
-    #z_div_page_add:hover{
-      opacity:1;
-    }
-
-
-    </style>
+    <link rel="stylesheet" href="css/cinema_cinema_set.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <!-- 侧边栏 -->
@@ -87,37 +68,37 @@
       <div class="text-left">
         <h2>影厅修改</h2>
       </div>
-      <div style="width:750px;" id="z_div_pages">
+      <div  id="z_div_pages">
 
 
-        <div class="z_div_single_page" style="position:relative;">
-          <div class="z_div_single_page_focus container-fluid" style="position:absolute;top:0px;left:0px;width:250px;height:250px;opacity:0;z-index:100;">
+        <div class="z_div_single_page">
+          <div class="z_div_single_page_focus container-fluid">
             <!-- 需要显示的内容 -->
-            <div class="text-center" style="top:30%;width:33.333333333%;left:10%;position:absolute;">
-              <a href="#" style="color:black;text-decoration:none;">
-                <img src="images/select_cinema/update_cinema_seat_page.png" style="width:100%" alt="更新影厅" />
+            <div class="text-center" style="left:10%;">
+              <a href="#">
+                <img src="images/select_cinema/update_cinema_seat_page.png" alt="更新影厅" />
                 更新影厅
               </a>
             </div>
-            <div class="text-center" style="top:30%;width:33.333333333%;right:10%;position:absolute;">
-              <a href="#" style="color:black;text-decoration:none;" data-toggle="modal" data-target="#z_div_model">
-                <img src="images/select_cinema/delete_cinema_seat_page.png" style="width:100%" alt="删除影厅" />
+            <div class="text-center" style="right:10%;">
+              <a href="#" data-toggle="modal" data-target="#z_div_model">
+                <img src="images/select_cinema/delete_cinema_seat_page.png" alt="删除影厅" />
                 删除影厅
               </a>
             </div>
           </div>
           <!-- 内容，将来需要模糊 -->
           <div class="z_div_single_page_message">
-            <h3 style="">影厅A</h3>
-            <hr style="border-color:black;">
+            <h3>影厅A</h3>
+            <hr>
             <h4>规格:</h4><p class="text-center">10*10</p>
             <h4>实际人数：</h4><p class="text-center"> 200人</p>
           </div>
         </div>
 
         <!-- 添加按钮 -->
-        <div class="z_div_single_page_add" style="position:relative;">
-          <div style="height:210px;width:210px;background:white;">
+        <div class="z_div_single_page_add" >
+          <div >
             <img id="z_div_page_add" src="images/select_cinema/focus.png"/>
           </div>
         </div>
@@ -127,9 +108,9 @@
     </div>
   </div>
 
+<!-- 弹出菜单 -->
   <div id="z_div_model" class="modal fade" role="dialog">
     <div class="modal-dialog">
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -139,7 +120,7 @@
           <p>是否要删除</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">是</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">是</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">否</button>
         </div>
       </div>

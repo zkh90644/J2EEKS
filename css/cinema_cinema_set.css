@@ -1,0 +1,70 @@
+#z_div_content{
+  position:relative;
+}
+
+#z_div_container{
+  position:absolute;
+  left:200px;
+  margin-top:10px;
+}
+
+#z_div_pages{
+  width:750px;
+}
+
+.z_div_single_page,.z_div_single_page_add{
+  width:250px;
+  background:url(../images/select_cinema/cinema_set_single_page.png);
+  background-size:250px 250px;
+  background-repeat:no-repeat;
+  padding:20px 20px 30px 20px;
+  float:left;
+  position:relative;
+}
+
+.z_div_single_page_focus{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:250px;
+  height:250px;
+  opacity:0;
+  z-index:100;
+}
+
+.z_div_single_page_focus > div{
+  top:30%;
+  width:33.333333333%;
+  position:absolute;
+}
+
+.z_div_single_page_focus > div > a{
+  color:black;
+  text-decoration:none;
+}
+
+.z_div_single_page_focus > div > a > img{
+   width:100%;
+}
+
+.z_div_single_page_message > hr{
+  border-color:black;
+}
+
+.z_div_single_page_add{
+  position:relative;
+}
+
+.z_div_single_page_add > div{
+  height:210px;
+  width:210px;
+  background:white;
+}
+
+#z_div_page_add{
+  opacity:0.3;
+  transition: 0.5s all;
+}
+#z_div_page_add:hover{
+  opacity:1;
+}
