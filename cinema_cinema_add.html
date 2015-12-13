@@ -7,7 +7,9 @@
     <script src="javascript/jquery.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/cinema_index_sidebar.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="css/cinema_index_content.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/cinema_cinema_add.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+    </style>
   </head>
   <body>
     <!-- 侧边栏 -->
@@ -67,52 +69,33 @@
       <div class="text-left">
         <h2>基本信息</h2>
       </div>
-      <form class="form-inline" action="#" method="post">
-        <div id="z_form_img">
-          <input type="image" src="images/select_cinema/self_image.png" alt="个人头像" class="img-circle" name="z_form_img_click"/>
-          <!-- 用来上传头像 -->
-          <input type="file" name="z_form_img_file_upload" style="display:none;">
+      <form class="" action="#" method="post">
+        <div class="container-fluid col-sm-12" id="z_div_setting">
+            <label for="cinema_name">影厅名：</label><input type="text" name="name" placeholder="例如：一号厅" class="form-control">
+            <label for="cinema_basic_model" id="z_label_cinema_basic_model">基本格局：</label>
+            <button type="button" name="basic_model1" onclick=changeSets(10,this) class="btn btn-primary btn-sm active z_btn_basic_btn" >10*10</button>
+            <button type="button" name="basic_model2" onclick=changeSets(16,this) class="btn btn-primary btn-sm z_btn_basic_btn">16*16</button>
+            <button type="button" name="basic_model3" onclick=changeSets(20,this) class="btn btn-primary btn-sm z_btn_basic_btn">20*20</button>
         </div>
-        <div class="z_form_div">
-          <label for="cinema_name" class="text-center">影院名称：</label>
-          <input type="text" class="form-control">
+        <div class="text-left">
+          <h4 style="opacity:">设置座位</h4>
         </div>
-        <div class="z_form_div">
-          <label for="cinema_address" class="text-center">影院地址：</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="z_form_div">
-          <label for="cinema_tel" class="text-center">影院电话：</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="z_form_div">
-          <label for="cinema_intro" class="text-center">影院介绍：</label>
-          <textarea name="name" rows="10" cols="60" class="form-control"></textarea>
-        </div>
-
-        <!-- 上传海报的模块 -->
-        <div class="z_form_div">
-          <div class="col-sm-2">
-            <label for="cinema_posters" class="text-center">影院海报：</label>
+        <div id="z_div_select_seat_background" class="container-fluid">
+          <div id="z_div_screen" class="col-sm-8 col-sm-push-2">
+            <img src="images/select_cinema/screen.png" alt="屏幕"/>
           </div>
-          <div class="col-sm-10" id="z_div_form_items">
-            <div id="z_div_from_firstItem">
-              <input type="file" name="upload-file" placeholder="点击上传文件">
-              <!-- margin-left为了解决按钮不排列在一列的问题。一样的代码，如果没有margin-left的话会导致这一行的按钮右移 -->
-              <button type="button" name="button" onclick=AddItem() class="btn btn-success btn-sm btn-circle" style="margin-left:2px;"><span class="glyphicon glyphicon-plus" style="padding-left:0px;"></span></button>
+          <div class="col-sm-12" id="z_div_select_seats">
+            <div class="col-sm-12" id="z_div_select_seats_all">
+              <!-- 座位动态生成 -->
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-success" id="z_btn_submit" style="margin-top:20px;">
-          提交
-        </button>
+        <button type="submit" class="btn btn-primary btn-sm" style="margin-top:20px;">保存</button>
       </form>
     </div>
   </div>
 
   <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
-  <script src="javascript/cinema_add_poster_item.js" charset="utf-8"></script>
-  <script type="text/javascript">
-  </script>
+  <script src="javascript/cinema_seat_set.js" charset="utf-8"></script>
   </body>
 </html>

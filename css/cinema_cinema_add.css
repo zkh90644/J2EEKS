@@ -1,0 +1,82 @@
+#z_div_content{
+  position:relative;
+}
+
+#z_div_container{
+  position:absolute;
+  left:200px;
+  margin-top:10px;
+}
+
+#z_div_select_seat_background{
+  width:700px;
+  background-color:white;
+}
+
+#z_div_setting{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#z_div_setting input{
+  display:inline-block;
+  width:auto;
+}
+
+#z_label_cinema_basic_model{
+  margin-left:20px;
+}
+
+#z_div_select_seat_background{
+  display:table;
+  padding:20px;
+}
+
+#z_div_screen img{
+  width:100%;
+}
+
+/*中心线的标签*/
+#z_div_select_seats{
+  background:url(../images/select_cinema/seatline.png);
+  background-position:50% 0%;
+  background-repeat:repeat-y;
+  margin-top:10px;
+}
+
+/*座椅整体*/
+#z_div_select_seats_all{
+  padding:0px;
+  margin-top:30px;
+}
+
+#z_div_select_seats_all > p{
+  width:200px;
+  text-align:center;
+  width:100%;
+  margin-bottom:0px;
+}
+
+/*座位标签*/
+#z_div_select_seats_all > p > span{
+  color:#999999;
+  position:absolute;
+  left:0;
+}
+
+/*椅子*/
+
+.z_a_seat{
+  width:20px;
+  height:20px;
+  display:inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.z_a_seat_normal{
+  background:url(../images/select_cinema/seat.png);
+  background-size:20px 20px;
+}
+.z_a_seat_selected{
+  background: url(../images/select_cinema/seat_selected.png);
+  background-size:20px 20px;
+}
