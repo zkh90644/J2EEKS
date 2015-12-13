@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>电影</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/cinema_index_sidebar.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/cinema_cinema_add.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+    .z_div_single_page,.z_div_single_page_add{
+      width:250px;
+      background:url(images/select_cinema/cinema_set_single_page.png);
+      background-size:250px 250px;
+      background-repeat:no-repeat;
+      padding:20px 20px 30px 20px;
+      float:left;
+    }
+
+    #z_div_page_add{
+      opacity:0.3;
+      transition: 0.5s all;
+    }
+    #z_div_page_add:hover{
+      opacity:1;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- 侧边栏 -->
+  <div id="z_div_sidebar" class="container-fluid">
+    <!-- 关闭按钮 -->
+    <div class="text-right">
+      <img src="images/select_cinema/sidebar-close.png" alt="关闭按钮" id="z_div_sidebar_close" onclick=hideSiderBar() />
+    </div>
+    <!-- 菜单按钮 -->
+    <div class="text-center" id="z_img_menu_list">
+      <img src="images/select_cinema/menu_img.png" alt="菜单按钮" onclick=showSiderBar() />
+    </div>
+    <!-- 个人信息 -->
+    <div id="z_div_self_message" class="col-sm-12 container-fluid">
+      <div class="col-sm-6 text-right" id="z_div_hello_world">
+        <span>XXX</span><br>
+        <span>欢迎回来</span>
+      </div>
+      <div class="col-sm-6" id="z_div_self_image">
+        <img src="images/select_cinema/self_image.png" alt="个人头像" class="img-circle"/>
+      </div>
+    </div>
+    <!-- 分割线 -->
+    <div class="col-sm-12">
+      <hr>
+    </div>
+    <!-- 菜单栏 -->
+    <div id="z_div_list_menu" class="col-sm-12 container-fluid">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/info_logo.png" alt="个人消息" /><span class="z_div_list_menu_item_message">信息修改</span></a></li>
+        <li class="text-center" class="z_div_list_menu_item">
+          <a data-toggle="collapse" data-parent="#accordion" href="#z_ul_cinema_set"><img class="z_div_list_menu_item_image" src="images/select_cinema/yingting_logo.png" alt="影厅logo" /><span class="z_div_list_menu_item_message">影院增删</span></a>
+          <ul class="list-unstyled panel-collapse collapse" id="z_ul_cinema_set" >
+            <li><a href="#"><img src="images/select_cinema/yingyuan_add.png" alt="影院增加" /><span>影院增加</span></a></li>
+            <li class="z_img_secondLi"><a href="#"><img src="images/select_cinema/yingyuan_set.png" alt="影院删改" /><span>影院删改</span></a></li>
+          </ul>
+        </li>
+        <li class="text-center" class="z_div_list_menu_item">
+          <a data-toggle="collapse" data-parent="#accordion" href="#z_ul_film_set"><img class="z_div_list_menu_item_image" src="images/select_cinema/film_logo.png" alt="电影logo" /><span class="z_div_list_menu_item_message">电影增删</span></a>
+          <ul class="list-unstyled panel-collapse collapse" id="z_ul_film_set">
+            <li><a href="#" ><img src="images/select_cinema/film_add.png" alt="电影增加" /><span>电影增加</span></a></li>
+            <li class="z_img_secondLi"><a href="#"><img src="images/select_cinema/film_set.png" alt="电影删改" /><span>电影删改</span></a></li>
+          </ul>
+        </li>
+        <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/search_logo.png" alt="查询logo" /><span class="z_div_list_menu_item_message">订票情况</span></a></li>
+      </ul>
+    </div>
+    <!-- 退出按钮 -->
+    <div class="text-right" id="z_div_logout">
+      <a href="#" id="z_a_logout_button"><img src="images/select_cinema/logout_logo.png" alt="" id="z_img_logout_logo"/><span>退出</span></a>
+    </div>
+  </div>
+
+    <!-- 内容展示 -->
+  <div class="container-fluid col-sm-12" id="z_div_content" >
+    <div id="z_div_container">
+      <div class="text-left">
+        <h2>影厅修改</h2>
+      </div>
+      <div style="width:750px;" id="z_div_pages">
+
+
+        <div class="z_div_single_page" style="position:relative;">
+          <div class="z_div_single_page_focus container-fluid" style="position:absolute;top:0px;left:0px;width:250px;height:250px;opacity:0;z-index:100;">
+            <!-- 需要显示的内容 -->
+            <div class="text-center" style="top:30%;width:33.333333333%;left:10%;position:absolute;">
+              <a href="#" style="color:black;text-decoration:none;">
+                <img src="images/select_cinema/update_cinema_seat_page.png" style="width:100%" alt="更新影厅" />
+                更新影厅
+              </a>
+            </div>
+            <div class="text-center" style="top:30%;width:33.333333333%;right:10%;position:absolute;">
+              <a href="#" style="color:black;text-decoration:none;" data-toggle="modal" data-target="#z_div_model">
+                <img src="images/select_cinema/delete_cinema_seat_page.png" style="width:100%" alt="删除影厅" />
+                删除影厅
+              </a>
+            </div>
+          </div>
+          <!-- 内容，将来需要模糊 -->
+          <div class="z_div_single_page_message">
+            <h3 style="">影厅A</h3>
+            <hr style="border-color:black;">
+            <h4>规格:</h4><p class="text-center">10*10</p>
+            <h4>实际人数：</h4><p class="text-center"> 200人</p>
+          </div>
+        </div>
+
+        <!-- 添加按钮 -->
+        <div class="z_div_single_page_add" style="position:relative;">
+          <div style="height:210px;width:210px;background:white;">
+            <img id="z_div_page_add" src="images/select_cinema/focus.png"/>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div id="z_div_model" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">提醒</h4>
+        </div>
+        <div class="modal-body">
+          <p>是否要删除</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">是</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">否</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  // function changWidth() {
+  //   var singlePageWidth = $(".z_div_single_page").css("width");
+  //   var contentWidth = $('#z_div_pages').css("width");
+  //   var singlePageWidthVal = parseInt(singlePageWidth);
+  //   var contentWidthVal = parseInt(contentWidth);
+  //
+  //   if (contentWidthVal <= (singlePageWidthVal * 3)) {
+  //     $('#z_div_pages').css("width","");
+  //   }else {
+  //     var changeValue = ((singlePageWidthVal * 3)+"px");
+  //     $('#z_div_pages').css("width",changeValue);
+  //   }
+  // }
+
+  // 滚动页面的时候更改界面
+  $(document).ready(function () {
+    $(document).scroll(changeLeftOfContent);
+    $(window).resize(changeLeftOfContent);
+    // $(window).resize(function () {
+    //   changeLeftOfContent();
+    //   changWidth();
+    // })
+  });
+
+  // 页面加载完的时候第一次加载
+  window.onload = function () {
+    changeLeftOfContent();
+      // changWidth();
+  }
+
+
+  // win8-block的模糊动画开始
+  	$('.z_div_single_page').mouseenter(function() {
+  		var focus = $(this).find(".z_div_single_page_message");
+  		var focusword = $(this).find(".z_div_single_page_focus");
+
+  		$({blurRadius: 0}).animate({blurRadius: 5}, {
+  		    duration: 250,
+  		    easing: 'swing',
+  		    step: function() {
+  		        focus.css({
+  		            "-webkit-filter": "blur("+this.blurRadius+"px)",
+  		            "filter": "blur("+this.blurRadius+"px)"
+  		    });
+  		  }
+  		});
+  		focus.animate({opacity:0.3});
+  		focusword.animate({opacity:1});
+  	});
+
+  	$('.z_div_single_page').mouseleave(function() {
+  		var focus = $(this).find(".z_div_single_page_message");
+  		var focusword = $(this).find(".z_div_single_page_focus");
+  		$({blurRadius: 5}).animate({blurRadius: 0}, {
+  		    duration: 250,
+  		    easing: 'swing',
+  		    step: function() {
+  		        focus.css({
+  		            "-webkit-filter": "blur("+this.blurRadius+"px)",
+  		            "filter": "blur("+this.blurRadius+"px)"
+  		    });
+  		  }
+  		});
+  		focus.animate({opacity:1});
+  		focusword.animate({opacity:0});
+  	});
+  // win8-block模糊动画结束
+
+
+  </script>
+  </body>
+</html>

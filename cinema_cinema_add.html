@@ -78,10 +78,10 @@
             <button type="button" name="basic_model3" onclick=changeSets(20,this) class="btn btn-primary btn-sm z_btn_basic_btn">20*20</button>
         </div>
         <div class="text-left">
-          <h4 style="opacity:">设置座位</h4>
+          <h4>设置座位</h4>
         </div>
         <div id="z_div_select_seat_background" class="container-fluid">
-          <div id="z_div_screen" class="col-sm-8 col-sm-push-2">
+          <div class="col-sm-8 col-sm-push-2" id="z_div_screen">
             <img src="images/select_cinema/screen.png" alt="屏幕"/>
           </div>
           <div class="col-sm-12" id="z_div_select_seats">
@@ -90,12 +90,25 @@
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-sm" style="margin-top:20px;">保存</button>
+        <button type="submit" class="btn btn-primary btn-sm" style="margin-top:20px;margin-bottom:20px;">保存</button>
       </form>
     </div>
   </div>
 
   <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
   <script src="javascript/cinema_seat_set.js" charset="utf-8"></script>
+  <script type="text/javascript">
+
+  // 滚动页面的时候更改界面
+  $(document).ready(function () {
+    $(document).scroll(changeLeftOfContent);
+    $(window).resize(changeLeftOfContent);
+  });
+
+  // 页面加载完的时候第一次加载
+  window.onload = function () {
+    changeLeftOfContent();
+  }
+  </script>
   </body>
 </html>

@@ -113,6 +113,17 @@
   <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
   <script src="javascript/cinema_add_poster_item.js" charset="utf-8"></script>
   <script type="text/javascript">
+
+  // 滚动页面的时候更改界面
+  $(document).ready(function () {
+    $(document).scroll(changeLeftOfContent);
+    $(window).resize(changeLeftOfContent);
+  });
+
+  // 页面加载完的时候第一次加载
+  window.onload = function () {
+    changeLeftOfContent();
+  }
   </script>
   </body>
 </html>
