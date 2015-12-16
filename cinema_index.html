@@ -8,6 +8,11 @@
     <script src="javascript/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/cinema_index_sidebar.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/cinema_index_content.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+      .z_label_name{
+        width:70px;
+      }
+    </style>
   </head>
   <body>
     <!-- 侧边栏 -->
@@ -37,27 +42,27 @@
     <!-- 菜单栏 -->
     <div id="z_div_list_menu" class="col-sm-12 container-fluid">
       <ul class="nav nav-pills nav-stacked">
-        <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/info_logo.png" alt="个人消息" /><span class="z_div_list_menu_item_message">信息修改</span></a></li>
+        <li class="text-center" class="z_div_list_menu_item"><a href="cinema_index.html"><img class="z_div_list_menu_item_image" src="images/select_cinema/info_logo.png" alt="个人消息" /><span class="z_div_list_menu_item_message">信息修改</span></a></li>
         <li class="text-center" class="z_div_list_menu_item">
           <a data-toggle="collapse" data-parent="#accordion" href="#z_ul_cinema_set"><img class="z_div_list_menu_item_image" src="images/select_cinema/yingting_logo.png" alt="影厅logo" /><span class="z_div_list_menu_item_message">影院增删</span></a>
           <ul class="list-unstyled panel-collapse collapse" id="z_ul_cinema_set" >
-            <li><a href="#"><img src="images/select_cinema/yingyuan_add.png" alt="影院增加" /><span>影院增加</span></a></li>
-            <li class="z_img_secondLi"><a href="#"><img src="images/select_cinema/yingyuan_set.png" alt="影院删改" /><span>影院删改</span></a></li>
+            <li><a href="cinema_cinema_add.html"><img src="images/select_cinema/yingyuan_add.png" alt="影院增加" /><span>影院增加</span></a></li>
+            <li class="z_img_secondLi"><a href="cinema_cinema_set.html"><img src="images/select_cinema/yingyuan_set.png" alt="影院删改" /><span>影院删改</span></a></li>
           </ul>
         </li>
         <li class="text-center" class="z_div_list_menu_item">
           <a data-toggle="collapse" data-parent="#accordion" href="#z_ul_film_set"><img class="z_div_list_menu_item_image" src="images/select_cinema/film_logo.png" alt="电影logo" /><span class="z_div_list_menu_item_message">电影增删</span></a>
           <ul class="list-unstyled panel-collapse collapse" id="z_ul_film_set">
-            <li><a href="#" ><img src="images/select_cinema/film_add.png" alt="电影增加" /><span>电影增加</span></a></li>
-            <li class="z_img_secondLi"><a href="#"><img src="images/select_cinema/film_set.png" alt="电影删改" /><span>电影删改</span></a></li>
+            <li><a href="cinema_film_add.html" ><img src="images/select_cinema/film_add.png" alt="电影增加" /><span>电影增加</span></a></li>
+            <li class="z_img_secondLi"><a href="cinema_film_set.html"><img src="images/select_cinema/film_set.png" alt="电影删改" /><span>电影删改</span></a></li>
           </ul>
         </li>
-        <li class="text-center" class="z_div_list_menu_item"><a href="#"><img class="z_div_list_menu_item_image" src="images/select_cinema/search_logo.png" alt="查询logo" /><span class="z_div_list_menu_item_message">订票情况</span></a></li>
+        <li class="text-center" class="z_div_list_menu_item"><a href="cinema_search.html"><img class="z_div_list_menu_item_image" src="images/select_cinema/search_logo.png" alt="查询logo" /><span class="z_div_list_menu_item_message">订票情况</span></a></li>
       </ul>
     </div>
     <!-- 退出按钮 -->
     <div class="text-right" id="z_div_logout">
-      <a href="#" id="z_a_logout_button"><img src="images/select_cinema/logout_logo.png" alt="" id="z_img_logout_logo"/><span>退出</span></a>
+      <a href="index.html" id="z_a_logout_button"><img src="images/select_cinema/logout_logo.png" alt="" id="z_img_logout_logo"/><span>退出</span></a>
     </div>
   </div>
 
@@ -67,28 +72,47 @@
       <div class="text-left">
         <h2>基本信息</h2>
       </div>
-      <form class="form-inline" action="#" method="post">
+      <form class="form-inline" action="#" method="post" >
         <div id="z_form_img">
           <input type="image" src="images/select_cinema/self_image.png" alt="个人头像" class="img-circle" name="z_form_img_click"/>
           <!-- 用来上传头像 -->
           <input type="file" name="z_form_img_file_upload" style="display:none;">
         </div>
         <div class="z_form_div">
-          <label for="cinema_name" class="text-center">影院名称：</label>
+          <label for="cinema_name" class="text-right z_label_name">影院名称：</label>
           <input type="text" class="form-control">
         </div>
         <div class="z_form_div">
-          <label for="cinema_address" class="text-center">影院地址：</label>
+          <!-- 下拉菜单 -->
+          <label for="cinema_area" class="text-right z_label_name">地区：</label>
+          <select class="form-control" id="cinema_area">
+            <option>杭州市</option>
+            <option>宁波市</option>
+            <option>衢州市</option>
+            <option>湖州市</option>
+            <option>各种市</option>
+            <option>瞎JB市</option>
+          </select>
+        </div>
+        <div class="z_form_div">
+          <label for="cinema_address" class="text-right z_label_name">影院地址：</label>
           <input type="text" class="form-control">
         </div>
         <div class="z_form_div">
-          <label for="cinema_tel" class="text-center">影院电话：</label>
+          <!-- 服务，手动输入 -->
+          <label for="cinema_name" class="text-right z_label_name">影院服务：</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="z_form_div">
+          <label for="cinema_tel" class="text-right z_label_name">影院电话：</label>
           <input type="text" class="form-control">
         </div>
         <div class="z_form_div">
-          <label for="cinema_intro" class="text-center">影院介绍：</label>
+          <label for="cinema_intro" class="text-right z_label_name">影院介绍：</label>
           <textarea name="name" rows="10" cols="60" class="form-control"></textarea>
         </div>
+
 
         <!-- 上传海报的模块 -->
         <div class="z_form_div">
@@ -103,6 +127,7 @@
             </div>
           </div>
         </div>
+
         <button type="submit" class="btn btn-success" id="z_btn_submit" style="margin-top:20px;">
           提交
         </button>
@@ -112,18 +137,6 @@
 
   <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
   <script src="javascript/cinema_add_poster_item.js" charset="utf-8"></script>
-  <script type="text/javascript">
 
-  // 滚动页面的时候更改界面
-  $(document).ready(function () {
-    $(document).scroll(changeLeftOfContent);
-    $(window).resize(changeLeftOfContent);
-  });
-
-  // 页面加载完的时候第一次加载
-  window.onload = function () {
-    changeLeftOfContent();
-  }
-  </script>
   </body>
 </html>

@@ -1,0 +1,10 @@
+/*整体*/
+#z_div_content{
+  position:relative;
+}
+
+#z_div_container{
+  position:absolute;
+  left:200px;
+  margin-top:10px;
+}

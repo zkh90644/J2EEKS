@@ -7,78 +7,8 @@
     <script src="javascript/jquery.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/cinema_index_sidebar.css" media="screen" title="no title" charset="utf-8">
-    <style media="screen">
-    .progress{
-      margin: 0;
-    }
-
-    /*整体*/
-    #z_div_content{
-      position:relative;
-    }
-
-    #z_div_container{
-      position:absolute;
-      left:200px;
-      margin-top:10px;
-    }
-
-    #z_div_container > .container-fluid{
-      width:700px;
-    }
-
-    #z_div_search_list{
-
-    }
-
-    .z_div_single_search{
-      background-color:white;
-      border-radius:15px;
-      box-shadow:1px 1px 5px #ddd;
-      padding:10px 20px;
-      margin-bottom:20px;
-    }
-
-    .z_div_intro{
-      padding:0px;
-      position:relative;
-    }
-
-    .z_div_intro_text{
-      position:absolute;
-      width:100%;
-    }
-
-    .z_h5_seat_rate{
-      float:left;
-      margin-top:3px;
-    }
-
-    .z_div_progress_rate{
-      display:absolute;
-      float:right;
-    }
-
-    .z_div_progress_content{
-      width:90%;
-    }
-
-    .z_div_pageButton{
-      width:100px;
-      opacity:0.6;
-      transition: 0.5s all;
-    }
-
-    .z_div_pageButton img{
-      width:100%;
-    }
-
-    .z_div_pageButton:hover{
-      opacity:1;
-    }
-
-
-    </style>
+    <link rel="stylesheet" href="css/cinema_cinema_add.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/cinema_film_set.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <!-- 侧边栏 -->
@@ -136,42 +66,63 @@
   <div class="container-fluid col-sm-12" id="z_div_content" >
     <div id="z_div_container">
       <div class="text-left">
-        <h2>订票查询</h2>
+        <h2>电影修改</h2>
       </div>
-      <div class="container-fluid" style="">
+      <div  id="z_div_pages">
 
-        <div id="z_div_search_list">
-          <div class="z_div_single_search col-sm-12 container-fluid">
-            <div class="z_div_intro col-sm-12 container-fluid">
-              <h5><div class="text-left z_div_intro_text">电影名：火星救援</div><div class="text-center z_div_intro_text">影厅号：1号厅</div><div class="text-right">上映时间：13:00~15:00</div></h5>
+
+        <div class="z_div_single_page">
+          <div class="z_div_single_page_focus container-fluid">
+            <!-- 需要显示的内容 -->
+            <div class="text-center" style="left:10%;">
+              <a href="#">
+                <img src="images/select_cinema/update_cinema_seat_page.png" alt="更新影厅" />
+                更新电影
+              </a>
             </div>
-            <div class="z_div_intro col-sm-12 container-fluid">
-              <h5 class="z_h5_seat_rate">上座率：</h5>
-              <div class="z_div_progress_rate">20/200</div>
-              <div class="z_div_progress_content">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-default progress-bar-striped active" style="width:10%">10%</div>
-                </div>
-              </div>
+            <div class="text-center" style="right:10%;">
+              <a href="#" data-toggle="modal" data-target="#z_div_model">
+                <img src="images/select_cinema/delete_cinema_seat_page.png" alt="删除影厅" />
+                删除电影
+              </a>
             </div>
+          </div>
+          <!-- 内容，将来需要模糊 -->
+          <div class="z_div_single_page_message">
+            <h4>寻龙诀</h4>
+            <hr style="margin:5px;">
+            <h4 style="margin-top:0px;">上映档期:</h4><p class="text-center" style="margin-bottom:0px;">X月X日-X月X日</p>
+            <h4 style="margin-top:0px;">影厅号</h4><p class="text-center" style="margin-bottom:0px;">1号厅</p>
+            <h4>上映时间</h4><p class="text-center"  style="margin-bottom:0px;">13:00-14:00</p>
           </div>
         </div>
 
-        <!-- 上下页 -->
-        <div class="z_div_pageinaziton" style="position:relative;">
-
-          <div style="float:left;"  class="z_div_pageButton">
-            <a href="#">
-              <img src="images/select_cinema/pre_page.png" alt="上一页" />
-            </a>
+        <!-- 添加按钮 -->
+        <div class="z_div_single_page_add" >
+          <div >
+            <img id="z_div_page_add" src="images/select_cinema/focus.png"/>
           </div>
+        </div>
 
-          <div style="float:right;" class="z_div_pageButton">
-            <a href="#">
-              <img src="images/select_cinema/next_page.png" alt="下一页" />
-            </a>
-          </div>
 
+      </div>
+    </div>
+  </div>
+
+<!-- 弹出菜单 -->
+  <div id="z_div_model" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">提醒</h4>
+        </div>
+        <div class="modal-body">
+          <p>是否要删除</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">是</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">否</button>
         </div>
       </div>
     </div>
@@ -179,17 +130,74 @@
 
   <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
   <script type="text/javascript">
+  // function changWidth() {
+  //   var singlePageWidth = $(".z_div_single_page").css("width");
+  //   var contentWidth = $('#z_div_pages').css("width");
+  //   var singlePageWidthVal = parseInt(singlePageWidth);
+  //   var contentWidthVal = parseInt(contentWidth);
+  //
+  //   if (contentWidthVal <= (singlePageWidthVal * 3)) {
+  //     $('#z_div_pages').css("width","");
+  //   }else {
+  //     var changeValue = ((singlePageWidthVal * 3)+"px");
+  //     $('#z_div_pages').css("width",changeValue);
+  //   }
+  // }
 
   // 滚动页面的时候更改界面
   $(document).ready(function () {
     $(document).scroll(changeLeftOfContent);
     $(window).resize(changeLeftOfContent);
+    // $(window).resize(function () {
+    //   changeLeftOfContent();
+    //   changWidth();
+    // })
   });
 
   // 页面加载完的时候第一次加载
   window.onload = function () {
     changeLeftOfContent();
+      // changWidth();
   }
+
+  // win8-block的模糊动画开始
+  	$('.z_div_single_page').mouseenter(function() {
+  		var focus = $(this).find(".z_div_single_page_message");
+  		var focusword = $(this).find(".z_div_single_page_focus");
+
+  		$({blurRadius: 0}).animate({blurRadius: 5}, {
+  		    duration: 400,
+  		    easing: 'swing',
+  		    step: function() {
+  		        focus.css({
+  		            "-webkit-filter": "blur("+this.blurRadius+"px)",
+  		            "filter": "blur("+this.blurRadius+"px)"
+  		    });
+  		  }
+  		});
+  		focus.animate({opacity:0.3});
+  		focusword.animate({opacity:1});
+  	});
+
+  	$('.z_div_single_page').mouseleave(function() {
+  		var focus = $(this).find(".z_div_single_page_message");
+  		var focusword = $(this).find(".z_div_single_page_focus");
+  		$({blurRadius: 5}).animate({blurRadius: 0}, {
+  		    duration: 400,
+  		    easing: 'swing',
+  		    step: function() {
+  		        focus.css({
+  		            "-webkit-filter": "blur("+this.blurRadius+"px)",
+  		            "filter": "blur("+this.blurRadius+"px)"
+  		    });
+  		  }
+  		});
+  		focus.animate({opacity:1});
+  		focusword.animate({opacity:0});
+  	});
+  // win8-block模糊动画结束
+
+
   </script>
   </body>
 </html>

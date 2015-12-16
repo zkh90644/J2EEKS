@@ -1,0 +1,78 @@
+/*页面整体布局*/
+#z_div_content{
+  position:relative;
+}
+
+#z_div_container{
+  position:absolute;
+  left:200px;
+  margin-top:10px;
+}
+
+#z_div_pages{
+  width:750px;
+}
+
+/*页面标签图案设置*/
+.z_div_single_page,.z_div_single_page_add{
+  width:250px;
+  background:url(../images/select_cinema/cinema_set_single_page.png);
+  background-size:250px 250px;
+  background-repeat:no-repeat;
+  padding:20px 20px 30px 20px;
+  float:left;
+  position:relative;
+}
+
+/*鼠标悬浮出来的DIV样式*/
+.z_div_single_page_focus{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:250px;
+  height:250px;
+  opacity:0;
+  z-index:100;
+}
+
+
+.z_div_single_page_focus > div{
+  top:30%;
+  width:33.333333333%;
+  position:absolute;
+}
+
+.z_div_single_page_focus > div > a{
+  color:black;
+  text-decoration:none;
+}
+
+.z_div_single_page_focus > div > a > img{
+   width:100%;
+}
+
+/*底下的内容*/
+.z_div_single_page_message > hr{
+  border-color:black;
+}
+
+/*增加按钮*/
+.z_div_single_page_add{
+  position:relative;
+}
+
+.z_div_single_page_add > div{
+  height:210px;
+  width:210px;
+  background:white;
+}
+
+/*增加按钮的动画效果*/
+#z_div_page_add{
+  opacity:0.3;
+  transition: 0.5s all;
+}
+
+#z_div_page_add:hover{
+  opacity:1;
+}
