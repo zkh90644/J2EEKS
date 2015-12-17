@@ -6,7 +6,11 @@
 function addNewBlock(blockname,toBlock,num) {
   // 对应块数小于传入变量
   if ($(blockname).length < (num-1)) {
-    var item = $(blockname)[0].parent().html();
+    var item = $(document.createElement("div"));
+    item.attr("class","z_div_single_add");
+    item.attr("style","border:1px solid #e1e1e1;");
+    item.append($(blockname).html());
+    // var item = $(blockname).parent().html();
     // alert(item);
     $(item).appendTo($(toBlock));
     $(item).animate({"opacity":"1"});
@@ -18,8 +22,6 @@ function addNewBlock(blockname,toBlock,num) {
 function DeleteBlock(th) {
   // 增加防止误删最后一个block
   var className = $(th).parent().attr('class');
-  // alert(className);
-  // alert($("."+className).length);
 
   if ($("."+className).length >1) {
     function deleteItem() {

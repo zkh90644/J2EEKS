@@ -16,55 +16,57 @@
   </head>
   <body>
     <!-- 侧边栏 -->
-  <div id="z_div_sidebar" class="container-fluid">
-    <!-- 关闭按钮 -->
-    <div class="text-right">
-      <img src="images/select_cinema/sidebar-close.png" alt="关闭按钮" id="z_div_sidebar_close" onclick=hideSiderBar() />
-    </div>
-    <!-- 菜单按钮 -->
-    <div class="text-center" id="z_img_menu_list">
-      <img src="images/select_cinema/menu_img.png" alt="菜单按钮" onclick=showSiderBar() />
-    </div>
-    <!-- 个人信息 -->
-    <div id="z_div_self_message" class="col-sm-12 container-fluid">
-      <div class="col-sm-6 text-right" id="z_div_hello_world">
-        <span>XXX</span><br>
-        <span>欢迎回来</span>
+    <div id="z_div_sidebar" class="container-fluid">
+      <!-- 关闭按钮 -->
+      <div class="text-right">
+        <img src="images/select_cinema/sidebar-close.png" alt="关闭按钮" id="z_div_sidebar_close" onclick=hideSiderBar() />
       </div>
-      <div class="col-sm-6" id="z_div_self_image">
-        <img src="images/select_cinema/self_image.png" alt="个人头像" class="img-circle"/>
+      <!-- 菜单按钮 -->
+      <div class="text-center" id="z_img_menu_list">
+        <img src="images/select_cinema/menu_img.png" alt="菜单按钮" onclick=showSiderBar() />
+      </div>
+      <!-- 个人信息 -->
+      <div id="z_div_self_message" class="col-sm-12 container-fluid">
+        <div class="col-sm-6 text-right" id="z_div_hello_world">
+          <span>XXX</span><br>
+          <span>欢迎回来</span>
+        </div>
+        <div class="col-sm-6" id="z_div_self_image">
+          <img src="images/select_cinema/self_image.png" alt="个人头像" class="img-circle"/>
+        </div>
+      </div>
+      <!-- 分割线 -->
+      <div class="col-sm-12">
+        <hr>
+      </div>
+      <!-- 菜单栏 -->
+      <div id="z_div_list_menu" class="col-sm-12 container-fluid">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="text-center" class="z_div_list_menu_item"><a href="cinema_index.html"><img class="z_div_list_menu_item_image" src="images/select_cinema/info_logo.png" alt="个人消息" /><span class="z_div_list_menu_item_message">信息修改</span></a></li>
+          <li class="text-center" class="z_div_list_menu_item">
+            <a data-toggle="collapse" data-parent="#accordion" href="#z_ul_cinema_set"><img class="z_div_list_menu_item_image" src="images/select_cinema/yingting_logo.png" alt="影厅logo" /><span class="z_div_list_menu_item_message">影院增删</span></a>
+            <ul class="list-unstyled panel-collapse collapse" id="z_ul_cinema_set" >
+              <li><a href="cinema_cinema_add.html"><img src="images/select_cinema/yingyuan_add.png" alt="影院增加" /><span>影院增加</span></a></li>
+              <li class="z_img_secondLi"><a href="cinema_cinema_set.html"><img src="images/select_cinema/yingyuan_set.png" alt="影院删改" /><span>影院删改</span></a></li>
+            </ul>
+          </li>
+          <li class="text-center" class="z_div_list_menu_item">
+            <a data-toggle="collapse" data-parent="#accordion" href="#z_ul_film_set"><img class="z_div_list_menu_item_image" src="images/select_cinema/film_logo.png" alt="电影logo" /><span class="z_div_list_menu_item_message">电影增删</span></a>
+            <ul class="list-unstyled panel-collapse collapse" id="z_ul_film_set">
+              <li><a href="cinema_film_add.html" ><img src="images/select_cinema/film_add.png" alt="电影增加" /><span>电影增加</span></a></li>
+              <li class="z_img_secondLi"><a href="cinema_film_set.html"><img src="images/select_cinema/film_set.png" alt="电影删改" /><span>电影删改</span></a></li>
+            </ul>
+          </li>
+          <li class="text-center" class="z_div_list_menu_item"><a href="cinema_poster.html"><img class="z_div_list_menu_item_image" src="images/select_cinema/poster_logo.png" alt="个人消息" /><span class="z_div_list_menu_item_message">剧照选择</span></a></li>
+          <li class="text-center" class="z_div_list_menu_item"><a href="cinema_search.html"><img class="z_div_list_menu_item_image" src="images/select_cinema/search_logo.png" alt="查询logo" /><span class="z_div_list_menu_item_message">订票情况</span></a></li>
+
+        </ul>
+      </div>
+      <!-- 退出按钮 -->
+      <div class="text-right" id="z_div_logout">
+        <a href="index.html" id="z_a_logout_button"><img src="images/select_cinema/logout_logo.png" alt="" id="z_img_logout_logo"/><span>退出</span></a>
       </div>
     </div>
-    <!-- 分割线 -->
-    <div class="col-sm-12">
-      <hr>
-    </div>
-    <!-- 菜单栏 -->
-    <div id="z_div_list_menu" class="col-sm-12 container-fluid">
-      <ul class="nav nav-pills nav-stacked">
-        <li class="text-center" class="z_div_list_menu_item"><a href="cinema_index.html"><img class="z_div_list_menu_item_image" src="images/select_cinema/info_logo.png" alt="个人消息" /><span class="z_div_list_menu_item_message">信息修改</span></a></li>
-        <li class="text-center" class="z_div_list_menu_item">
-          <a data-toggle="collapse" data-parent="#accordion" href="#z_ul_cinema_set"><img class="z_div_list_menu_item_image" src="images/select_cinema/yingting_logo.png" alt="影厅logo" /><span class="z_div_list_menu_item_message">影院增删</span></a>
-          <ul class="list-unstyled panel-collapse collapse" id="z_ul_cinema_set" >
-            <li><a href="cinema_cinema_add.html"><img src="images/select_cinema/yingyuan_add.png" alt="影院增加" /><span>影院增加</span></a></li>
-            <li class="z_img_secondLi"><a href="cinema_cinema_set.html"><img src="images/select_cinema/yingyuan_set.png" alt="影院删改" /><span>影院删改</span></a></li>
-          </ul>
-        </li>
-        <li class="text-center" class="z_div_list_menu_item">
-          <a data-toggle="collapse" data-parent="#accordion" href="#z_ul_film_set"><img class="z_div_list_menu_item_image" src="images/select_cinema/film_logo.png" alt="电影logo" /><span class="z_div_list_menu_item_message">电影增删</span></a>
-          <ul class="list-unstyled panel-collapse collapse" id="z_ul_film_set">
-            <li><a href="cinema_film_add.html" ><img src="images/select_cinema/film_add.png" alt="电影增加" /><span>电影增加</span></a></li>
-            <li class="z_img_secondLi"><a href="cinema_film_set.html"><img src="images/select_cinema/film_set.png" alt="电影删改" /><span>电影删改</span></a></li>
-          </ul>
-        </li>
-        <li class="text-center" class="z_div_list_menu_item"><a href="cinema_search.html"><img class="z_div_list_menu_item_image" src="images/select_cinema/search_logo.png" alt="查询logo" /><span class="z_div_list_menu_item_message">订票情况</span></a></li>
-      </ul>
-    </div>
-    <!-- 退出按钮 -->
-    <div class="text-right" id="z_div_logout">
-      <a href="index.html" id="z_a_logout_button"><img src="images/select_cinema/logout_logo.png" alt="" id="z_img_logout_logo"/><span>退出</span></a>
-    </div>
-  </div>
 
     <!-- 内容展示 -->
   <div class="container-fluid col-sm-12" id="z_div_content" >
