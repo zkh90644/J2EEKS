@@ -127,7 +127,7 @@
 
               <div class="z_form_div">
                 <label for="film_price" class="text-right z_label_name">价格：</label>
-                <input type="text" class="form-control" placeholder="例如：12元">
+                <input type="text" class="form-control" placeholder="例如：12"><span>元</span>
               </div>
 
             </div>
@@ -156,6 +156,7 @@
   // 页面加载完的时候第一次加载
   window.onload = function () {
     changeLeftOfContent();
+    initDatePicker();
   }
 
 

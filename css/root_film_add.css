@@ -1,0 +1,89 @@
+body{
+  background-color:#e3e3e3;
+}
+.z_div_content{
+  background-color:white;
+  padding-top:50px;
+  padding-bottom: 50px;
+}
+
+form{
+  position:relative;
+}
+
+#z_form_v_poster{
+  width:25%;
+  position:absolute;
+  right:8%;
+}
+
+#z_form_v_poster > .img-rounded{
+  width:100%
+}
+
+#z_form_img_file_upload{
+  display: none;
+}
+
+#z_input_h_poster{
+  margin-top:7px;
+}
+
+#z_div_poster{
+  padding-left:0px;
+}
+
+#z_div_poster > input {
+  display:inline;
+}
+
+#z_btn_add_item{
+  margin:5px;
+  height:20px;
+  width:20px;
+  border-radius: 15px;
+  padding:2px 0 6px 0;
+  text-align:center;
+}
+
+.z_div_add_by_button{
+  opacity:0;
+}
+.z_div_add_by_button > input{
+  display:inline;
+}
+
+.z_div_add_by_button button{
+  margin-left:2px;
+  margin:5px;
+  height:20px;
+  width:20px;
+  border-radius: 15px;
+  padding:2px 0 6px 0;
+  text-align:center;
+}
+
+@media screen and (min-width:767px) {
+  #z_btn_submit{
+    left:5%;
+    position:absolute;
+  }
+}
+
+@media screen and (max-width:768px) {
+  #z_form_v_poster{
+    display: none;
+  }
+}
+
+@media screen and (max-width:768px) {
+  #z_form_v_poster{
+    display: none;
+  }
+}
+
+@media screen and (min-width:1500px) {
+  #z_form_v_poster{
+    width:243px;
+  }
+}

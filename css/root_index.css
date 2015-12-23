@@ -1,0 +1,15 @@
+body{
+  background-color:#e3e3e3;
+}
+.z_div_content{
+  background-color:white;padding-top:50px;
+}
+#z_div_search_form {
+  margin: 10px 20px;
+}
+th{
+  text-align: center;
+}
+td{
+  font-size: 14px;
+}

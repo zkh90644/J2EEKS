@@ -1,0 +1,96 @@
+<!doctype>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/root_user_add.css" media="screen" charset="utf-8">
+<script src="javascript/jquery.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<title>管理员界面</title>
+
+</head>
+
+<body>
+	<!-- 菜单栏 -->
+	<div id="z_div_menu">
+	    <nav class="navbar navbar-inverse navbar-fixed-top">
+	        <div class="container-fluid">
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#z_div_menu_content">
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <a class="navbar-brand" href="#">XX电影</a>
+	            </div>
+	            <div class="collapse navbar-collapse"  id="z_div_menu_content">
+	                <ul class="nav navbar-nav" id="z_ul_menu_list">
+	                    <li class=""><a href="root_index.html">首页</a></li>
+	                    <li class="">
+	                        <a href="" class="dropdown-toggle" data-toggle="dropdown">电影管理<span class="caret"></span></a>
+	                            <ul class="dropdown-menu">
+	                                <li><a href="root_film_add.html">电影新增</a></li>
+	                                <li><a href="root_index.html">电影查询</a></li>
+	                            </ul>
+	                    </li>
+	                    <li class="">
+	                        <a href="" class="dropdown-toggle" data-toggle="dropdown">用户管理<span class="caret"></span></a>
+	                            <ul class="dropdown-menu">
+	                                <li><a href="root_user_add.html">用户新增</a></li>
+	                                <li><a href="root_userList.html">用户查询</a></li>
+	                            </ul>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </nav>
+	</div>
+	<!-- 菜单栏结束 -->
+
+  <!-- 首页，显示欢迎界面，如果不需要查询功能，直接删去form即可 -->
+  <div class="z_div_content col-sm-8 col-sm-push-2">
+    <h3>用户新增</h3>
+    <hr>
+    <form class="form form-horizontal col-sm-8 col-sm-push-1" action="" method="post" >
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label">用户名：</label>
+        <div class="col-sm-9">
+          <input type="text" name="name" value="" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">密码：</label>
+        <div class="col-sm-9">
+          <input type="text" name="name" value="" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">身份：</label>
+        <div class="col-sm-9">
+          <select class="form-control" id="">
+            <option>用户</option>
+            <option>影院管理员</option>
+            <option>root</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-3 control-label">联系方式：</label>
+        <div class="col-sm-9">
+          <input type="text" name="name" value="" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label">余额：</label>
+        <div class="col-sm-9">
+          <input type="text" name="name" value="" class="form-control">
+        </div>
+      </div>
+
+      <button type="submit" id="z_btn_submit" class="btn btn-sm btn-primary">保存</button>
+    </form>
+  </div>
+
+</body>
