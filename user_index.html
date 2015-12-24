@@ -1,0 +1,96 @@
+<!DOCTYPE>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- bootstrap库加载 -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/user_index.css" media="screen" title="no title" charset="utf-8">
+<script src="javascript/jquery.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<!-- 页面基本效果库加载 -->
+
+</head>
+
+<body>
+<!-- 菜单 -->
+<div id="z_div_menu">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="z_div_navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#z_div_menu_content">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">XX电影</a>
+            </div>
+            <div class="collapse navbar-collapse"  id="z_div_menu_content">
+                <ul class="nav navbar-nav" id="z_ul_menu_list">
+                    <li class=""><a href="#">首页</a></li>
+                    <li class="">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">电影<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="">正在热映</a></li>
+                                <li><a href="">即将上映</a></li>
+                            </ul>
+                    </li>
+                    <li class=""><a href="#">影院</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="z_li_log"><a href="#">username</a></li>
+                    <li class="z_li_log"><a href="#"><span class="glyphicon glyphicon-log-out">登出</a></li>
+                      <!-- 登出访问主页，用户名访问用户首页 -->
+                    <!-- 图片无法加载，需要加载font -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container-fluid z_div_navbar" id="z_div_all" style="padding:50px 0 0 0;">
+  <div id="z_div_sidebar" style="background-color:rgb(34,34,34);">
+    <nav class="text-center" style="color:white;">
+      <h4>username</h4>
+      <h4> <small>欢迎回来</small></h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">我的信息</a></li>
+        <li><a href="#">订单信息</a></li>
+        <li><a href="#">我的收藏</a></li>
+      </ul>
+
+    </nav>
+  </div>
+  <div id="z_div_content">
+    <h3>我的信息</h3>
+    <hr>
+    <form class="form form-horizontal col-sm-12" action="" method="post" >
+      <div class="form-group">
+        <label class="col-sm-2 control-label">账号：</label>
+        <label style="padding-top:7px;padding-left:15px;">username</label>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">密码：</label>
+        <div class="col-sm-9">
+          <input type="password" name="name" value="" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">联系方式：</label>
+        <div class="col-sm-9">
+          <input type="text" name="name" value="" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">余额：</label>
+        <label style="padding-top:7px;padding-left:15px;">XX</label><span>元</span>
+      </div>
+
+      <button type="submit" id="z_btn_submit" class="btn btn-sm btn-primary">保存</button>
+    </form>
+  </div>
+<script src="javascript/user_basic.js" charset="utf-8"></script>
+</body>
+</html>

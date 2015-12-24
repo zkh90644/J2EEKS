@@ -1,0 +1,32 @@
+
+#z_div_sidebar{
+  width:16.6666667%;
+  position:relative;
+  float:left;
+}
+
+#z_div_content{
+  background-color:white;
+  width:66.66666667%;
+  position:relative;
+  float:left;
+  left: 8.33333333%;
+  margin-top:10px;
+}
+
+
+#z_div_navbar{
+  margin-bottom: 0px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover{
+   background-color: white;
+   color:rgb(34,34,34);
+ }
+
+.nav-pills > li > a{
+  color:white;
+}
+.nav-pills > li > a:focus, .nav-pills > li > a:hover{
+  color:rgb(34,34,34);
+}
