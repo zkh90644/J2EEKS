@@ -1,8 +1,18 @@
+#z_div_all{
+  padding:50px 0 0 0;
+}
 
 #z_div_sidebar{
+  background-color:rgb(34,34,34);
   width:16.6666667%;
   position:relative;
   float:left;
+}
+
+
+
+#z_div_sidebar > nav{
+  color:white;
 }
 
 #z_div_content{
@@ -17,6 +27,11 @@
 
 #z_div_navbar{
   margin-bottom: 0px;
+}
+
+.z_label_just4show{
+   padding-top:7px;
+   padding-left:15px;
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover{

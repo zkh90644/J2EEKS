@@ -1,8 +1,16 @@
+#z_div_all{
+   padding:50px 0 0 0;
+}
 
 #z_div_sidebar{
   width:16.6666667%;
   position:relative;
   float:left;
+  background-color:rgb(34,34,34);
+}
+
+#z_div_sidebar > nav{
+  color:white;
 }
 
 #z_div_content{
@@ -29,4 +37,8 @@
 }
 .nav-pills > li > a:focus, .nav-pills > li > a:hover{
   color:rgb(34,34,34);
+}
+
+.panel-body > div{
+  float:left;
 }
