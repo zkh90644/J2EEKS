@@ -24,6 +24,13 @@
   position:relative;
 }
 
+.z_h4_show_head{
+  margin-top:0px;
+}
+.z_p_show_info{
+   margin-bottom:0px;
+}
+
 /*鼠标悬浮出来的DIV样式*/
 .z_div_single_page_focus{
   position:absolute;

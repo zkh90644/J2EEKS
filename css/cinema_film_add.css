@@ -7,4 +7,62 @@
   position:absolute;
   left:200px;
   margin-top:10px;
+  width:600px;
+  padding:0px;
+}
+
+/*电影右侧海报*/
+#z_div_poster{
+  float: right;
+}
+
+#z_div_poster > img{
+  width: 150px;
+}
+
+/*所有添加消息的内容*/
+#z_div_all_add{
+   padding:0px;
+}
+
+/*增加按钮*/
+#z_button_add{
+  margin-left:2px;
+  margin:5px;
+  height:30px;
+  width:30px;
+  border-radius: 15px;
+  padding:6px 0;
+  text-align:center;
+}
+
+#z_button_add > label{
+  padding-left:0px;
+}
+
+.z_div_single_add{
+  border:1px solid #e1e1e1;
+}
+
+.close{
+  margin-right:5px;
+}
+
+.z_label_name{
+  width:75px;
+}
+
+
+.z_form_div{
+  margin: 10px;
+}
+
+#z_btn_save{
+  margin-top:20px;margin-bottom:20px;
+}
+
+@media screen and (max-width:767px) {
+  #z_div_poster{
+    display: none;
+  }
 }

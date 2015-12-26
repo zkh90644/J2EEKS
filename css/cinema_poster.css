@@ -1,0 +1,18 @@
+/*整体*/
+#z_div_content{
+  position:relative;
+}
+
+#z_div_container{
+  position:absolute;
+  left:200px;
+  margin-top:10px;
+}
+
+#z_div_poster_list{
+   width:700px;
+   height:200px;
+}
+#z_div_poster_list > div > img{
+  width: 100%;
+}

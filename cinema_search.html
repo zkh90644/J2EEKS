@@ -7,77 +7,8 @@
     <script src="javascript/jquery.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/cinema_index_sidebar.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/cinema_search.css" media="screen" title="no title" charset="utf-8">
     <style media="screen">
-    .progress{
-      margin: 0;
-    }
-
-    /*整体*/
-    #z_div_content{
-      position:relative;
-    }
-
-    #z_div_container{
-      position:absolute;
-      left:200px;
-      margin-top:10px;
-    }
-
-    #z_div_container > .container-fluid{
-      width:700px;
-    }
-
-    #z_div_search_list{
-
-    }
-
-    .z_div_single_search{
-      background-color:white;
-      border-radius:15px;
-      box-shadow:1px 1px 5px #ddd;
-      padding:10px 20px;
-      margin-bottom:20px;
-    }
-
-    .z_div_intro{
-      padding:0px;
-      position:relative;
-    }
-
-    .z_div_intro_text{
-      position:absolute;
-      width:100%;
-    }
-
-    .z_h5_seat_rate{
-      float:left;
-      margin-top:3px;
-    }
-
-    .z_div_progress_rate{
-      display:absolute;
-      float:right;
-    }
-
-    .z_div_progress_content{
-      width:90%;
-    }
-
-    .z_div_pageButton{
-      width:100px;
-      opacity:0.6;
-      transition: 0.5s all;
-    }
-
-    .z_div_pageButton img{
-      width:100%;
-    }
-
-    .z_div_pageButton:hover{
-      opacity:1;
-    }
-
-
     </style>
   </head>
   <body>
@@ -138,7 +69,7 @@
       <div class="text-left">
         <h2>订票查询</h2>
       </div>
-      <div class="container-fluid" style="">
+      <div class="container-fluid">
 
         <div id="z_div_search_list">
           <div class="z_div_single_search col-sm-12 container-fluid">
@@ -158,9 +89,9 @@
         </div>
 
         <!-- 上下页 -->
-        <div class="z_div_pageinaziton" style="position:relative;">
+        <div id="z_div_pageinaziton" style="">
 
-          <div style="float:left;"  class="z_div_pageButton">
+          <div style="float:left;" class="z_div_pageButton">
             <a href="#">
               <img src="images/select_cinema/pre_page.png" alt="上一页" />
             </a>
@@ -178,18 +109,6 @@
   </div>
 
   <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
-  <script type="text/javascript">
-
-  // 滚动页面的时候更改界面
-  $(document).ready(function () {
-    $(document).scroll(changeLeftOfContent);
-    $(window).resize(changeLeftOfContent);
-  });
-
-  // 页面加载完的时候第一次加载
-  window.onload = function () {
-    changeLeftOfContent();
-  }
-  </script>
+  <script src="javascript/cinema_search.js" charset="utf-8"></script>
   </body>
 </html>

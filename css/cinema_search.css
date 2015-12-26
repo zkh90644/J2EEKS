@@ -1,0 +1,72 @@
+.progress{
+  margin: 0;
+}
+
+/*整体*/
+#z_div_content{
+  position:relative;
+}
+
+#z_div_container{
+  position:absolute;
+  left:200px;
+  margin-top:10px;
+}
+
+#z_div_container > .container-fluid{
+  width:700px;
+}
+
+#z_div_search_list{
+
+}
+
+.z_div_single_search{
+  background-color:white;
+  border-radius:15px;
+  box-shadow:1px 1px 5px #ddd;
+  padding:10px 20px;
+  margin-bottom:20px;
+}
+
+.z_div_intro{
+  padding:0px;
+  position:relative;
+}
+
+.z_div_intro_text{
+  position:absolute;
+  width:100%;
+}
+
+.z_h5_seat_rate{
+  float:left;
+  margin-top:3px;
+}
+
+.z_div_progress_rate{
+  display:absolute;
+  float:right;
+}
+
+.z_div_progress_content{
+  width:90%;
+}
+
+#z_div_pageinaziton{
+  position:relative;
+}
+
+.z_div_pageButton{
+  width:100px;
+  opacity:0.6;
+  transition: 0.5s all;
+}
+
+.z_div_pageButton img{
+  width:100%;
+}
+
+.z_div_pageButton:hover{
+  opacity:1;
+}

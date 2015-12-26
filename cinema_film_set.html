@@ -7,7 +7,6 @@
     <script src="javascript/jquery.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/cinema_index_sidebar.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="css/cinema_cinema_add.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/cinema_film_set.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
@@ -91,9 +90,9 @@
           <div class="z_div_single_page_message">
             <h4>寻龙诀</h4>
             <hr style="margin:5px;">
-            <h4 style="margin-top:0px;">上映档期:</h4><p class="text-center" style="margin-bottom:0px;">X月X日-X月X日</p>
-            <h4 style="margin-top:0px;">影厅号</h4><p class="text-center" style="margin-bottom:0px;">1号厅</p>
-            <h4>上映时间</h4><p class="text-center"  style="margin-bottom:0px;">13:00-14:00</p>
+            <h4 class="z_h4_show_head">上映档期:</h4><p class="text-center z_p_show_info" >X月X日-X月X日</p>
+            <h4 class="z_h4_show_head">影厅号</h4><p class="text-center z_p_show_info" >1号厅</p>
+            <h4 class="z_h4_show_head">上映时间</h4><p class="text-center z_p_show_info" >13:00-14:00</p>
           </div>
         </div>
 
@@ -129,75 +128,6 @@
   </div>
 
   <script src="javascript/cinema_sidebar.js" charset="utf-8"></script>
-  <script type="text/javascript">
-  // function changWidth() {
-  //   var singlePageWidth = $(".z_div_single_page").css("width");
-  //   var contentWidth = $('#z_div_pages').css("width");
-  //   var singlePageWidthVal = parseInt(singlePageWidth);
-  //   var contentWidthVal = parseInt(contentWidth);
-  //
-  //   if (contentWidthVal <= (singlePageWidthVal * 3)) {
-  //     $('#z_div_pages').css("width","");
-  //   }else {
-  //     var changeValue = ((singlePageWidthVal * 3)+"px");
-  //     $('#z_div_pages').css("width",changeValue);
-  //   }
-  // }
-
-  // 滚动页面的时候更改界面
-  $(document).ready(function () {
-    $(document).scroll(changeLeftOfContent);
-    $(window).resize(changeLeftOfContent);
-    // $(window).resize(function () {
-    //   changeLeftOfContent();
-    //   changWidth();
-    // })
-  });
-
-  // 页面加载完的时候第一次加载
-  window.onload = function () {
-    changeLeftOfContent();
-      // changWidth();
-  }
-
-  // win8-block的模糊动画开始
-  	$('.z_div_single_page').mouseenter(function() {
-  		var focus = $(this).find(".z_div_single_page_message");
-  		var focusword = $(this).find(".z_div_single_page_focus");
-
-  		$({blurRadius: 0}).animate({blurRadius: 5}, {
-  		    duration: 400,
-  		    easing: 'swing',
-  		    step: function() {
-  		        focus.css({
-  		            "-webkit-filter": "blur("+this.blurRadius+"px)",
-  		            "filter": "blur("+this.blurRadius+"px)"
-  		    });
-  		  }
-  		});
-  		focus.animate({opacity:0.3});
-  		focusword.animate({opacity:1});
-  	});
-
-  	$('.z_div_single_page').mouseleave(function() {
-  		var focus = $(this).find(".z_div_single_page_message");
-  		var focusword = $(this).find(".z_div_single_page_focus");
-  		$({blurRadius: 5}).animate({blurRadius: 0}, {
-  		    duration: 400,
-  		    easing: 'swing',
-  		    step: function() {
-  		        focus.css({
-  		            "-webkit-filter": "blur("+this.blurRadius+"px)",
-  		            "filter": "blur("+this.blurRadius+"px)"
-  		    });
-  		  }
-  		});
-  		focus.animate({opacity:1});
-  		focusword.animate({opacity:0});
-  	});
-  // win8-block模糊动画结束
-
-
-  </script>
+  <script src="javascript/cinema_film_set.js" charset="utf-8"></script>
   </body>
 </html>

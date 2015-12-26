@@ -26,13 +26,3 @@ $(document).ready(function () {
 window.onload = function () {
   changeLeftOfContent();
 }
-
-// logo可以选择上传
-$('input[type="image"]').click(function () {
-  $('input[name="z_form_img_file_upload"]').click();
-})
-
-
-
-// 使得页面可以显示，placement是用来确定方向，html为true是用来确定变量中的内容是通过HTML标签显示，而不是纯文本。
-$('.z_label_poper').popover({placement:"top",html:true});
