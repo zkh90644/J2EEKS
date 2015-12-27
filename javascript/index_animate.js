@@ -1,38 +1,9 @@
 // win8-block的模糊动画开始
-	$('.z_div_win8block_content_item').mouseenter(function() {
-		var focus = $(this).find("img");
-		var focusword = $(this).find(".z_div_win8block_content_item_word");
 
-		$({blurRadius: 0}).animate({blurRadius: 5}, {
-		    duration: 250,
-		    easing: 'swing',
-		    step: function() {
-		        focus.css({
-		            "-webkit-filter": "blur("+this.blurRadius+"px)",
-		            "filter": "blur("+this.blurRadius+"px)"
-		    });
-		  }
-		});
-		focus.animate({opacity:0.3});
-		focusword.animate({opacity:1});
-	});
+// 需要引入opacity.js,否则无法生效
+opacity_Enter('.z_div_win8block_content_item',"img",".z_div_win8block_content_item_word",400);
+opacity_Leave('.z_div_win8block_content_item',"img",".z_div_win8block_content_item_word",400);
 
-	$('.z_div_win8block_content_item').mouseleave(function() {
-		var focus = $(this).find("img");
-		var focusword = $(this).find(".z_div_win8block_content_item_word");
-		$({blurRadius: 5}).animate({blurRadius: 0}, {
-		    duration: 250,
-		    easing: 'swing',
-		    step: function() {
-		        focus.css({
-		            "-webkit-filter": "blur("+this.blurRadius+"px)",
-		            "filter": "blur("+this.blurRadius+"px)"
-		    });
-		  }
-		});
-		focus.animate({opacity:1});
-		focusword.animate({opacity:0});
-	});
 // win8-block模糊动画结束
 
 // 最后一栏变宽变窄的动画

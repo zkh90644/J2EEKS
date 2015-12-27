@@ -1,28 +1,16 @@
-// 本方法用来是的一个div中，底部div的页面模糊，上面一个DIV页面显示。
-// 使用方法通过animate中的step来实现
+// 此方法为用来创建一个前端显现，后端模糊的效果
+// all是整个，也就是鼠标移入的区域，
+// back是默认情况下显示，鼠标移上之后模糊
+// front是默认情况下不显示，鼠标以上之后显示
+// time为真个动画效果产生时间
 
-// 整个的大的包含两个内容的DIV，或者说需要鼠标移入的内容，传入都是标签的class或者ID
-function z_JS_Opacity(all,frontDiv,backDiv) {
-  var focus = $(this).find(backDiv);
-  var focusword = $(this).find(frontDiv);
+function opacity_Enter(all,back,front,time) {
   $(all).mouseenter(function() {
-    $({blurRadius: 0}).animate({blurRadius: 5}, {
-        duration: 400,
-        easing: 'swing',
-        step: function() {
-            focus.css({
-                "-webkit-filter": "blur("+this.blurRadius+"px)",
-                "filter": "blur("+this.blurRadius+"px)"
-        });
-      }
-    });
-    focus.animate({opacity:0.3});
-    focusword.animate({opacity:1});
-  });
+    var focus = $(this).find(back);
+    var focusword = $(this).find(front);
 
-  $(all).mouseleave(function() {
-    $({blurRadius: 5}).animate({blurRadius: 0}, {
-        duration: 400,
+    $({blurRadius: 0}).animate({blurRadius: 5}, {
+        duration: time,
         easing: 'swing',
         step: function() {
             focus.css({
@@ -31,7 +19,26 @@ function z_JS_Opacity(all,frontDiv,backDiv) {
         });
       }
     });
-    focus.animate({opacity:1});
-    focusword.animate({opacity:0});
+    focus.animate({opacity:0.3},{duration:time});
+    focusword.animate({opacity:1},{duration:time});
+  });
+}
+
+function opacity_Leave(all,back,front,time) {
+  $(all).mouseleave(function(){
+    var focus = $(this).find(back);
+    var focusword = $(this).find(front);
+    $({blurRadius: 5}).animate({blurRadius: 0}, {
+        duration: time,
+        easing: 'swing',
+        step: function() {
+            focus.css({
+                "-webkit-filter": "blur("+this.blurRadius+"px)",
+                "filter": "blur("+this.blurRadius+"px)"
+        });
+      }
+    });
+    focus.animate({opacity:1},{duration:time});
+    focusword.animate({opacity:0},{duration:time});
   });
 }
